@@ -12,6 +12,9 @@ build: src/checkparse.ml
 report:
 	bisect-ppx-report -I _build/ -I src/ -html coverage/ bisect*.out
 
+clean-report:
+	rm -rf coverage *.out
+
 clean:
 	$(OCAMLBUILD) -clean
 	rm -rf *.out coverage

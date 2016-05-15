@@ -11,7 +11,7 @@
           <span class="dirname">src/parsing/</span>ast_helper.ml
         </a>
       </h1>
-      <h2>69.49%</h2>
+      <h2>68.14%</h2>
     </div>
     <div id="navbar">
       <span class="unvisited" style="top:6.01%"></span>
@@ -31,8 +31,11 @@
       <span class="unvisited" style="top:13.23%"></span>
       <span class="unvisited" style="top:13.43%"></span>
       <span class="some-visited" style="top:14.23%"></span>
+      <span class="unvisited" style="top:15.83%"></span>
+      <span class="unvisited" style="top:16.83%"></span>
       <span class="unvisited" style="top:18.04%"></span>
       <span class="some-visited" style="top:19.24%"></span>
+      <span class="unvisited" style="top:25.25%"></span>
       <span class="some-visited" style="top:29.26%"></span>
       <span class="some-visited" style="top:32.06%"></span>
       <span class="some-visited" style="top:35.07%"></span>
@@ -41,6 +44,7 @@
       <span class="some-visited" style="top:39.48%"></span>
       <span class="some-visited" style="top:39.88%"></span>
       <span class="some-visited" style="top:42.48%"></span>
+      <span class="unvisited" style="top:43.29%"></span>
       <span class="some-visited" style="top:44.29%"></span>
       <span class="unvisited" style="top:47.09%"></span>
       <span class="some-visited" style="top:47.90%"></span>
@@ -161,12 +165,12 @@
 <a id="L76"></a><span class="visited"> </span>
 <a id="L77"></a><span class="visited"> </span>
 <a id="L78"></a><span class="visited"> </span>
-<a id="L79"></a><span class="visited"> </span>
+<a id="L79"></a><span class="unvisited"> </span>
 <a id="L80"></a><span class="visited"> </span>
 <a id="L81"></a><span class="visited"> </span>
 <a id="L82"></a><span class="visited"> </span>
 <a id="L83"></a><span class="visited"> </span>
-<a id="L84"></a><span class="visited"> </span>
+<a id="L84"></a><span class="unvisited"> </span>
 <a id="L85"></a><span class="visited"> </span>
 <a id="L86"></a><span class="visited"> </span>
 <a id="L87"></a><span class="visited"> </span>
@@ -208,7 +212,7 @@
 <a id="L123"></a><span class="visited"> </span>
 <a id="L124"></a><span class="visited"> </span>
 <a id="L125"></a><span class="visited"> </span>
-<a id="L126"></a><span class="visited"> </span>
+<a id="L126"></a><span class="unvisited"> </span>
 <a id="L127"></a><span class="visited"> </span>
 <a id="L128"></a><span class="visited"> </span>
 <a id="L129"></a><span class="visited"> </span>
@@ -298,7 +302,7 @@
 <a id="L213"></a><span class="visited"> </span>
 <a id="L214"></a><span > </span>
 <a id="L215"></a><span class="visited"> </span>
-<a id="L216"></a><span class="visited"> </span>
+<a id="L216"></a><span class="unvisited"> </span>
 <a id="L217"></a><span > </span>
 <a id="L218"></a><span > </span>
 <a id="L219"></a><span > </span>
@@ -1133,21 +1137,21 @@ module Const = struct
 end
 
 module Typ = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="51802">[</span>]) d =
-    <span data-count="104540">{</span>ptyp_desc = d; ptyp_loc = loc; ptyp_attributes = attrs}
-  let attr d a = <span data-count="12517">{</span>d with ptyp_attributes = d.ptyp_attributes @ [a]}
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="12832">[</span>]) d =
+    <span data-count="26452">{</span>ptyp_desc = d; ptyp_loc = loc; ptyp_attributes = attrs}
+  let attr d a = <span data-count="73">{</span>d with ptyp_attributes = d.ptyp_attributes @ [a]}
 
-  let any ?loc ?attrs () = <span data-count="746">m</span>k ?loc ?attrs Ptyp_any
-  let var ?loc ?attrs a = <span data-count="6194">m</span>k ?loc ?attrs (Ptyp_var a)
-  let arrow ?loc ?attrs a b c = <span data-count="16100">m</span>k ?loc ?attrs (Ptyp_arrow (a, b, c))
-  let tuple ?loc ?attrs a = <span data-count="452">m</span>k ?loc ?attrs (Ptyp_tuple a)
-  let constr ?loc ?attrs a b = <span data-count="27272">m</span>k ?loc ?attrs (Ptyp_constr (a, b))
-  let object_ ?loc ?attrs a b = <span data-count="454">m</span>k ?loc ?attrs (Ptyp_object (a, b))
-  let class_ ?loc ?attrs a b = <span data-count="120">m</span>k ?loc ?attrs (Ptyp_class (a, b))
-  let alias ?loc ?attrs a b = <span data-count="214">m</span>k ?loc ?attrs (Ptyp_alias (a, b))
-  let variant ?loc ?attrs a b c = <span data-count="376">m</span>k ?loc ?attrs (Ptyp_variant (a, b, c))
-  let poly ?loc ?attrs a b = <span data-count="632">m</span>k ?loc ?attrs (Ptyp_poly (a, b))
-  let package ?loc ?attrs a b = <span data-count="166">m</span>k ?loc ?attrs (Ptyp_package (a, b))
+  let any ?loc ?attrs () = <span data-count="482">m</span>k ?loc ?attrs Ptyp_any
+  let var ?loc ?attrs a = <span data-count="3546">m</span>k ?loc ?attrs (Ptyp_var a)
+  let arrow ?loc ?attrs a b c = <span data-count="1604">m</span>k ?loc ?attrs (Ptyp_arrow (a, b, c))
+  let tuple ?loc ?attrs a = <span data-count="212">m</span>k ?loc ?attrs (Ptyp_tuple a)
+  let constr ?loc ?attrs a b = <span data-count="6962">m</span>k ?loc ?attrs (Ptyp_constr (a, b))
+  let object_ ?loc ?attrs a b = <span data-count="114">m</span>k ?loc ?attrs (Ptyp_object (a, b))
+  let class_ ?loc ?attrs a b = <span data-count="46">m</span>k ?loc ?attrs (Ptyp_class (a, b))
+  let alias ?loc ?attrs a b = <span data-count="62">m</span>k ?loc ?attrs (Ptyp_alias (a, b))
+  let variant ?loc ?attrs a b c = <span data-count="200">m</span>k ?loc ?attrs (Ptyp_variant (a, b, c))
+  let poly ?loc ?attrs a b = <span data-count="232">m</span>k ?loc ?attrs (Ptyp_poly (a, b))
+  let package ?loc ?attrs a b = <span data-count="148">m</span>k ?loc ?attrs (Ptyp_package (a, b))
   let extension ?loc ?attrs a = <span data-count="12">m</span>k ?loc ?attrs (Ptyp_extension a)
 
   let force_poly t =
@@ -1157,74 +1161,74 @@ module Typ = struct
 end
 
 module Pat = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="55716">[</span>]) d =
-    <span data-count="111250">{</span>ppat_desc = d; ppat_loc = loc; ppat_attributes = attrs}
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="8952">[</span>]) d =
+    <span data-count="17904">{</span>ppat_desc = d; ppat_loc = loc; ppat_attributes = attrs}
   let attr d a = <span data-count="4">{</span>d with ppat_attributes = d.ppat_attributes @ [a]}
 
-  let any ?loc ?attrs () = <span data-count="4824">m</span>k ?loc ?attrs Ppat_any
-  let var ?loc ?attrs a = <span data-count="31022">m</span>k ?loc ?attrs (Ppat_var a)
-  let alias ?loc ?attrs a b = <span data-count="308">m</span>k ?loc ?attrs (Ppat_alias (a, b))
-  let constant ?loc ?attrs a = <span data-count="1664">m</span>k ?loc ?attrs (Ppat_constant a)
-  let interval ?loc ?attrs a b = <span data-count="8">m</span>k ?loc ?attrs (Ppat_interval (a, b))
-  let tuple ?loc ?attrs a = <span data-count="4522">m</span>k ?loc ?attrs (Ppat_tuple a)
-  let construct ?loc ?attrs a b = <span data-count="10532">m</span>k ?loc ?attrs (Ppat_construct (a, b))
-  let variant ?loc ?attrs a b = <span data-count="584">m</span>k ?loc ?attrs (Ppat_variant (a, b))
-  let record ?loc ?attrs a b = <span data-count="126">m</span>k ?loc ?attrs (Ppat_record (a, b))
-  let array ?loc ?attrs a = <span data-count="28">m</span>k ?loc ?attrs (Ppat_array a)
-  let or_ ?loc ?attrs a b = <span data-count="444">m</span>k ?loc ?attrs (Ppat_or (a, b))
-  let constraint_ ?loc ?attrs a b = <span data-count="1254">m</span>k ?loc ?attrs (Ppat_constraint (a, b))
-  let type_ ?loc ?attrs a = <span data-count="102">m</span>k ?loc ?attrs (Ppat_type a)
-  let lazy_ ?loc ?attrs a = <span data-count="12">m</span>k ?loc ?attrs (Ppat_lazy a)
-  let unpack ?loc ?attrs a = <span data-count="50">m</span>k ?loc ?attrs (Ppat_unpack a)
+  let any ?loc ?attrs () = <span data-count="616">m</span>k ?loc ?attrs Ppat_any
+  let var ?loc ?attrs a = <span data-count="4504">m</span>k ?loc ?attrs (Ppat_var a)
+  let alias ?loc ?attrs a b = <span data-count="172">m</span>k ?loc ?attrs (Ppat_alias (a, b))
+  let constant ?loc ?attrs a = <span data-count="24">m</span>k ?loc ?attrs (Ppat_constant a)
+  let interval ?loc ?attrs a b = <span data-count="0">m</span>k ?loc ?attrs (Ppat_interval (a, b))
+  let tuple ?loc ?attrs a = <span data-count="830">m</span>k ?loc ?attrs (Ppat_tuple a)
+  let construct ?loc ?attrs a b = <span data-count="1766">m</span>k ?loc ?attrs (Ppat_construct (a, b))
+  let variant ?loc ?attrs a b = <span data-count="312">m</span>k ?loc ?attrs (Ppat_variant (a, b))
+  let record ?loc ?attrs a b = <span data-count="54">m</span>k ?loc ?attrs (Ppat_record (a, b))
+  let array ?loc ?attrs a = <span data-count="0">m</span>k ?loc ?attrs (Ppat_array a)
+  let or_ ?loc ?attrs a b = <span data-count="14">m</span>k ?loc ?attrs (Ppat_or (a, b))
+  let constraint_ ?loc ?attrs a b = <span data-count="498">m</span>k ?loc ?attrs (Ppat_constraint (a, b))
+  let type_ ?loc ?attrs a = <span data-count="98">m</span>k ?loc ?attrs (Ppat_type a)
+  let lazy_ ?loc ?attrs a = <span data-count="2">m</span>k ?loc ?attrs (Ppat_lazy a)
+  let unpack ?loc ?attrs a = <span data-count="42">m</span>k ?loc ?attrs (Ppat_unpack a)
   let open_ ?loc ?attrs a b = <span data-count="0">m</span>k ?loc ?attrs (Ppat_open (a, b))
-  let exception_ ?loc ?attrs a = <span data-count="40">m</span>k ?loc ?attrs (Ppat_exception a)
+  let exception_ ?loc ?attrs a = <span data-count="6">m</span>k ?loc ?attrs (Ppat_exception a)
   let extension ?loc ?attrs a = <span data-count="14">m</span>k ?loc ?attrs (Ppat_extension a)
 end
 
 module Exp = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="347965">[</span>]) d =
-    <span data-count="688910">{</span>pexp_desc = d; pexp_loc = loc; pexp_attributes = attrs}
-  let attr d a = <span data-count="131">{</span>d with pexp_attributes = d.pexp_attributes @ [a]}
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="18722">[</span>]) d =
+    <span data-count="37282">{</span>pexp_desc = d; pexp_loc = loc; pexp_attributes = attrs}
+  let attr d a = <span data-count="16">{</span>d with pexp_attributes = d.pexp_attributes @ [a]}
 
-  let ident ?loc ?attrs a = <span data-count="114648">m</span>k ?loc ?attrs (Pexp_ident a)
-  let constant ?loc ?attrs a = <span data-count="62000">m</span>k ?loc ?attrs (Pexp_constant a)
-  let let_ ?loc ?attrs a b c = <span data-count="6354">m</span>k ?loc ?attrs (Pexp_let (a, b, c))
-  let fun_ ?loc ?attrs a b c d = <span data-count="10044">m</span>k ?loc ?attrs (Pexp_fun (a, b, c, d))
-  let function_ ?loc ?attrs a = <span data-count="808">m</span>k ?loc ?attrs (Pexp_function a)
-  let apply ?loc ?attrs a b = <span data-count="58860">m</span>k ?loc ?attrs (Pexp_apply (a, b))
-  let match_ ?loc ?attrs a b = <span data-count="1056">m</span>k ?loc ?attrs (Pexp_match (a, b))
-  let try_ ?loc ?attrs a b = <span data-count="336">m</span>k ?loc ?attrs (Pexp_try (a, b))
-  let tuple ?loc ?attrs a = <span data-count="17822">m</span>k ?loc ?attrs (Pexp_tuple a)
-  let construct ?loc ?attrs a b = <span data-count="42410">m</span>k ?loc ?attrs (Pexp_construct (a, b))
-  let variant ?loc ?attrs a b = <span data-count="396">m</span>k ?loc ?attrs (Pexp_variant (a, b))
-  let record ?loc ?attrs a b = <span data-count="3626">m</span>k ?loc ?attrs (Pexp_record (a, b))
-  let field ?loc ?attrs a b = <span data-count="758">m</span>k ?loc ?attrs (Pexp_field (a, b))
-  let setfield ?loc ?attrs a b c = <span data-count="68">m</span>k ?loc ?attrs (Pexp_setfield (a, b, c))
-  let array ?loc ?attrs a = <span data-count="1020">m</span>k ?loc ?attrs (Pexp_array a)
-  let ifthenelse ?loc ?attrs a b c = <span data-count="2426">m</span>k ?loc ?attrs (Pexp_ifthenelse (a, b, c))
-  let sequence ?loc ?attrs a b = <span data-count="11318">m</span>k ?loc ?attrs (Pexp_sequence (a, b))
-  let while_ ?loc ?attrs a b = <span data-count="292">m</span>k ?loc ?attrs (Pexp_while (a, b))
-  let for_ ?loc ?attrs a b c d e = <span data-count="674">m</span>k ?loc ?attrs (Pexp_for (a, b, c, d, e))
-  let constraint_ ?loc ?attrs a b = <span data-count="1707">m</span>k ?loc ?attrs (Pexp_constraint (a, b))
-  let coerce ?loc ?attrs a b c = <span data-count="128">m</span>k ?loc ?attrs (Pexp_coerce (a, b, c))
-  let send ?loc ?attrs a b = <span data-count="646">m</span>k ?loc ?attrs (Pexp_send (a, b))
-  let new_ ?loc ?attrs a = <span data-count="218">m</span>k ?loc ?attrs (Pexp_new a)
-  let setinstvar ?loc ?attrs a b = <span data-count="52">m</span>k ?loc ?attrs (Pexp_setinstvar (a, b))
-  let override ?loc ?attrs a = <span data-count="34">m</span>k ?loc ?attrs (Pexp_override a)
-  let letmodule ?loc ?attrs a b c= <span data-count="82">m</span>k ?loc ?attrs (Pexp_letmodule (a, b, c))
-  let letexception ?loc ?attrs a b = <span data-count="2">m</span>k ?loc ?attrs (Pexp_letexception (a, b))
-  let assert_ ?loc ?attrs a = <span data-count="1548">m</span>k ?loc ?attrs (Pexp_assert a)
-  let lazy_ ?loc ?attrs a = <span data-count="64">m</span>k ?loc ?attrs (Pexp_lazy a)
-  let poly ?loc ?attrs a b = <span data-count="640">m</span>k ?loc ?attrs (Pexp_poly (a, b))
-  let object_ ?loc ?attrs a = <span data-count="70">m</span>k ?loc ?attrs (Pexp_object a)
-  let newtype ?loc ?attrs a b = <span data-count="610">m</span>k ?loc ?attrs (Pexp_newtype (a, b))
-  let pack ?loc ?attrs a = <span data-count="70">m</span>k ?loc ?attrs (Pexp_pack a)
-  let open_ ?loc ?attrs a b c = <span data-count="78">m</span>k ?loc ?attrs (Pexp_open (a, b, c))
-  let extension ?loc ?attrs a = <span data-count="54">m</span>k ?loc ?attrs (Pexp_extension a)
-  let unreachable ?loc ?attrs () = <span data-count="52">m</span>k ?loc ?attrs Pexp_unreachable
+  let ident ?loc ?attrs a = <span data-count="7084">m</span>k ?loc ?attrs (Pexp_ident a)
+  let constant ?loc ?attrs a = <span data-count="1160">m</span>k ?loc ?attrs (Pexp_constant a)
+  let let_ ?loc ?attrs a b c = <span data-count="270">m</span>k ?loc ?attrs (Pexp_let (a, b, c))
+  let fun_ ?loc ?attrs a b c d = <span data-count="1424">m</span>k ?loc ?attrs (Pexp_fun (a, b, c, d))
+  let function_ ?loc ?attrs a = <span data-count="272">m</span>k ?loc ?attrs (Pexp_function a)
+  let apply ?loc ?attrs a b = <span data-count="2632">m</span>k ?loc ?attrs (Pexp_apply (a, b))
+  let match_ ?loc ?attrs a b = <span data-count="342">m</span>k ?loc ?attrs (Pexp_match (a, b))
+  let try_ ?loc ?attrs a b = <span data-count="20">m</span>k ?loc ?attrs (Pexp_try (a, b))
+  let tuple ?loc ?attrs a = <span data-count="808">m</span>k ?loc ?attrs (Pexp_tuple a)
+  let construct ?loc ?attrs a b = <span data-count="2174">m</span>k ?loc ?attrs (Pexp_construct (a, b))
+  let variant ?loc ?attrs a b = <span data-count="250">m</span>k ?loc ?attrs (Pexp_variant (a, b))
+  let record ?loc ?attrs a b = <span data-count="78">m</span>k ?loc ?attrs (Pexp_record (a, b))
+  let field ?loc ?attrs a b = <span data-count="44">m</span>k ?loc ?attrs (Pexp_field (a, b))
+  let setfield ?loc ?attrs a b c = <span data-count="4">m</span>k ?loc ?attrs (Pexp_setfield (a, b, c))
+  let array ?loc ?attrs a = <span data-count="8">m</span>k ?loc ?attrs (Pexp_array a)
+  let ifthenelse ?loc ?attrs a b c = <span data-count="116">m</span>k ?loc ?attrs (Pexp_ifthenelse (a, b, c))
+  let sequence ?loc ?attrs a b = <span data-count="198">m</span>k ?loc ?attrs (Pexp_sequence (a, b))
+  let while_ ?loc ?attrs a b = <span data-count="2">m</span>k ?loc ?attrs (Pexp_while (a, b))
+  let for_ ?loc ?attrs a b c d e = <span data-count="20">m</span>k ?loc ?attrs (Pexp_for (a, b, c, d, e))
+  let constraint_ ?loc ?attrs a b = <span data-count="512">m</span>k ?loc ?attrs (Pexp_constraint (a, b))
+  let coerce ?loc ?attrs a b c = <span data-count="52">m</span>k ?loc ?attrs (Pexp_coerce (a, b, c))
+  let send ?loc ?attrs a b = <span data-count="192">m</span>k ?loc ?attrs (Pexp_send (a, b))
+  let new_ ?loc ?attrs a = <span data-count="50">m</span>k ?loc ?attrs (Pexp_new a)
+  let setinstvar ?loc ?attrs a b = <span data-count="6">m</span>k ?loc ?attrs (Pexp_setinstvar (a, b))
+  let override ?loc ?attrs a = <span data-count="6">m</span>k ?loc ?attrs (Pexp_override a)
+  let letmodule ?loc ?attrs a b c= <span data-count="58">m</span>k ?loc ?attrs (Pexp_letmodule (a, b, c))
+  let letexception ?loc ?attrs a b = <span data-count="0">m</span>k ?loc ?attrs (Pexp_letexception (a, b))
+  let assert_ ?loc ?attrs a = <span data-count="22">m</span>k ?loc ?attrs (Pexp_assert a)
+  let lazy_ ?loc ?attrs a = <span data-count="32">m</span>k ?loc ?attrs (Pexp_lazy a)
+  let poly ?loc ?attrs a b = <span data-count="168">m</span>k ?loc ?attrs (Pexp_poly (a, b))
+  let object_ ?loc ?attrs a = <span data-count="20">m</span>k ?loc ?attrs (Pexp_object a)
+  let newtype ?loc ?attrs a b = <span data-count="402">m</span>k ?loc ?attrs (Pexp_newtype (a, b))
+  let pack ?loc ?attrs a = <span data-count="62">m</span>k ?loc ?attrs (Pexp_pack a)
+  let open_ ?loc ?attrs a b c = <span data-count="2">m</span>k ?loc ?attrs (Pexp_open (a, b, c))
+  let extension ?loc ?attrs a = <span data-count="46">m</span>k ?loc ?attrs (Pexp_extension a)
+  let unreachable ?loc ?attrs () = <span data-count="48">m</span>k ?loc ?attrs Pexp_unreachable
 
   let case lhs ?guard rhs =
-    <span data-count="7569">{</span>
+    <span data-count="1528">{</span>
      pc_lhs = lhs;
      pc_guard = guard;
      pc_rhs = rhs;
@@ -1232,130 +1236,130 @@ module Exp = struct
 end
 
 module Mty = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="812">[</span>]) d =
-    <span data-count="3082">{</span>pmty_desc = d; pmty_loc = loc; pmty_attributes = attrs}
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="694">[</span>]) d =
+    <span data-count="2698">{</span>pmty_desc = d; pmty_loc = loc; pmty_attributes = attrs}
   let attr d a = <span data-count="9">{</span>d with pmty_attributes = d.pmty_attributes @ [a]}
 
-  let ident ?loc ?attrs a = <span data-count="340">m</span>k ?loc ?attrs (Pmty_ident a)
+  let ident ?loc ?attrs a = <span data-count="280">m</span>k ?loc ?attrs (Pmty_ident a)
   let alias ?loc ?attrs a = <span data-count="56">m</span>k ?loc ?attrs (Pmty_alias a)
-  let signature ?loc ?attrs a = <span data-count="812">m</span>k ?loc ?attrs (Pmty_signature a)
-  let functor_ ?loc ?attrs a b c = <span data-count="40">m</span>k ?loc ?attrs (Pmty_functor (a, b, c))
-  let with_ ?loc ?attrs a b = <span data-count="138">m</span>k ?loc ?attrs (Pmty_with (a, b))
-  let typeof_ ?loc ?attrs a = <span data-count="46">m</span>k ?loc ?attrs (Pmty_typeof a)
+  let signature ?loc ?attrs a = <span data-count="736">m</span>k ?loc ?attrs (Pmty_signature a)
+  let functor_ ?loc ?attrs a b c = <span data-count="38">m</span>k ?loc ?attrs (Pmty_functor (a, b, c))
+  let with_ ?loc ?attrs a b = <span data-count="112">m</span>k ?loc ?attrs (Pmty_with (a, b))
+  let typeof_ ?loc ?attrs a = <span data-count="36">m</span>k ?loc ?attrs (Pmty_typeof a)
   let extension ?loc ?attrs a = <span data-count="2">m</span>k ?loc ?attrs (Pmty_extension a)
 end
 
 module Mod = struct
-let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="1830">[</span>]) d =
-  <span data-count="5921">{</span>pmod_desc = d; pmod_loc = loc; pmod_attributes = attrs}
-  let attr d a = <span data-count="19">{</span>d with pmod_attributes = d.pmod_attributes @ [a]}
+let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="1311">[</span>]) d =
+  <span data-count="4380">{</span>pmod_desc = d; pmod_loc = loc; pmod_attributes = attrs}
+  let attr d a = <span data-count="7">{</span>d with pmod_attributes = d.pmod_attributes @ [a]}
 
-  let ident ?loc ?attrs x = <span data-count="866">m</span>k ?loc ?attrs (Pmod_ident x)
-  let structure ?loc ?attrs x = <span data-count="1104">m</span>k ?loc ?attrs (Pmod_structure x)
+  let ident ?loc ?attrs x = <span data-count="570">m</span>k ?loc ?attrs (Pmod_ident x)
+  let structure ?loc ?attrs x = <span data-count="856">m</span>k ?loc ?attrs (Pmod_structure x)
   let functor_ ?loc ?attrs arg arg_ty body =
-    <span data-count="216">m</span>k ?loc ?attrs (Pmod_functor (arg, arg_ty, body))
-  let apply ?loc ?attrs m1 m2 = <span data-count="280">m</span>k ?loc ?attrs (Pmod_apply (m1, m2))
-  let constraint_ ?loc ?attrs m mty = <span data-count="456">m</span>k ?loc ?attrs (Pmod_constraint (m, mty))
-  let unpack ?loc ?attrs e = <span data-count="28">m</span>k ?loc ?attrs (Pmod_unpack e)
+    <span data-count="180">m</span>k ?loc ?attrs (Pmod_functor (arg, arg_ty, body))
+  let apply ?loc ?attrs m1 m2 = <span data-count="150">m</span>k ?loc ?attrs (Pmod_apply (m1, m2))
+  let constraint_ ?loc ?attrs m mty = <span data-count="406">m</span>k ?loc ?attrs (Pmod_constraint (m, mty))
+  let unpack ?loc ?attrs e = <span data-count="26">m</span>k ?loc ?attrs (Pmod_unpack e)
   let extension ?loc ?attrs a = <span data-count="2">m</span>k ?loc ?attrs (Pmod_extension a)
 end
 
 module Sig = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) d = <span data-count="2636">{</span>psig_desc = d; psig_loc = loc}
+  let mk ?(loc = <span data-count="0">!</span>default_loc) d = <span data-count="2260">{</span>psig_desc = d; psig_loc = loc}
 
-  let value ?loc a = <span data-count="482">m</span>k ?loc (Psig_value a)
-  let type_ ?loc rec_flag a = <span data-count="482">m</span>k ?loc (Psig_type (rec_flag, a))
+  let value ?loc a = <span data-count="370">m</span>k ?loc (Psig_value a)
+  let type_ ?loc rec_flag a = <span data-count="436">m</span>k ?loc (Psig_type (rec_flag, a))
   let type_extension ?loc a = <span data-count="28">m</span>k ?loc (Psig_typext a)
   let exception_ ?loc a = <span data-count="22">m</span>k ?loc (Psig_exception a)
-  let module_ ?loc a = <span data-count="152">m</span>k ?loc (Psig_module a)
-  let rec_module ?loc a = <span data-count="8">m</span>k ?loc (Psig_recmodule a)
-  let modtype ?loc a = <span data-count="28">m</span>k ?loc (Psig_modtype a)
+  let module_ ?loc a = <span data-count="144">m</span>k ?loc (Psig_module a)
+  let rec_module ?loc a = <span data-count="6">m</span>k ?loc (Psig_recmodule a)
+  let modtype ?loc a = <span data-count="24">m</span>k ?loc (Psig_modtype a)
   let open_ ?loc a = <span data-count="2">m</span>k ?loc (Psig_open a)
-  let include_ ?loc a = <span data-count="54">m</span>k ?loc (Psig_include a)
-  let class_ ?loc a = <span data-count="26">m</span>k ?loc (Psig_class a)
+  let include_ ?loc a = <span data-count="50">m</span>k ?loc (Psig_include a)
+  let class_ ?loc a = <span data-count="18">m</span>k ?loc (Psig_class a)
   let class_type ?loc a = <span data-count="2">m</span>k ?loc (Psig_class_type a)
   let extension ?loc ?(attrs = <span data-count="0">[</span>]) a = <span data-count="26">m</span>k ?loc (Psig_extension (a, attrs))
   let attribute ?loc a = <span data-count="2">m</span>k ?loc (Psig_attribute a)
   let text txt =
-    <span data-count="2945">L</span>ist.map
+    <span data-count="2589">L</span>ist.map
       (fun ds -&gt; <span data-count="0">a</span>ttribute ~loc:(docstring_loc ds) (text_attr ds))
       txt
 end
 
 module Str = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) d = <span data-count="37056">{</span>pstr_desc = d; pstr_loc = loc}
+  let mk ?(loc = <span data-count="0">!</span>default_loc) d = <span data-count="9178">{</span>pstr_desc = d; pstr_loc = loc}
 
-  let eval ?loc ?(attrs = <span data-count="0">[</span>]) a = <span data-count="3094">m</span>k ?loc (Pstr_eval (a, attrs))
-  let value ?loc a b = <span data-count="9070">m</span>k ?loc (Pstr_value (a, b))
-  let primitive ?loc a = <span data-count="2580">m</span>k ?loc (Pstr_primitive a)
-  let type_ ?loc rec_flag a = <span data-count="1666">m</span>k ?loc (Pstr_type (rec_flag, a))
-  let type_extension ?loc a = <span data-count="94">m</span>k ?loc (Pstr_typext a)
-  let exception_ ?loc a = <span data-count="94">m</span>k ?loc (Pstr_exception a)
-  let module_ ?loc a = <span data-count="1254">m</span>k ?loc (Pstr_module a)
-  let rec_module ?loc a = <span data-count="108">m</span>k ?loc (Pstr_recmodule a)
-  let modtype ?loc a = <span data-count="302">m</span>k ?loc (Pstr_modtype a)
-  let open_ ?loc a = <span data-count="600">m</span>k ?loc (Pstr_open a)
-  let class_ ?loc a = <span data-count="392">m</span>k ?loc (Pstr_class a)
-  let class_type ?loc a = <span data-count="68">m</span>k ?loc (Pstr_class_type a)
-  let include_ ?loc a = <span data-count="108">m</span>k ?loc (Pstr_include a)
-  let extension ?loc ?(attrs = <span data-count="0">[</span>]) a = <span data-count="268">m</span>k ?loc (Pstr_extension (a, attrs))
-  let attribute ?loc a = <span data-count="506">m</span>k ?loc (Pstr_attribute a)
+  let eval ?loc ?(attrs = <span data-count="0">[</span>]) a = <span data-count="226">m</span>k ?loc (Pstr_eval (a, attrs))
+  let value ?loc a b = <span data-count="1562">m</span>k ?loc (Pstr_value (a, b))
+  let primitive ?loc a = <span data-count="94">m</span>k ?loc (Pstr_primitive a)
+  let type_ ?loc rec_flag a = <span data-count="1022">m</span>k ?loc (Pstr_type (rec_flag, a))
+  let type_extension ?loc a = <span data-count="86">m</span>k ?loc (Pstr_typext a)
+  let exception_ ?loc a = <span data-count="48">m</span>k ?loc (Pstr_exception a)
+  let module_ ?loc a = <span data-count="910">m</span>k ?loc (Pstr_module a)
+  let rec_module ?loc a = <span data-count="106">m</span>k ?loc (Pstr_recmodule a)
+  let modtype ?loc a = <span data-count="260">m</span>k ?loc (Pstr_modtype a)
+  let open_ ?loc a = <span data-count="74">m</span>k ?loc (Pstr_open a)
+  let class_ ?loc a = <span data-count="108">m</span>k ?loc (Pstr_class a)
+  let class_type ?loc a = <span data-count="44">m</span>k ?loc (Pstr_class_type a)
+  let include_ ?loc a = <span data-count="80">m</span>k ?loc (Pstr_include a)
+  let extension ?loc ?(attrs = <span data-count="0">[</span>]) a = <span data-count="70">m</span>k ?loc (Pstr_extension (a, attrs))
+  let attribute ?loc a = <span data-count="12">m</span>k ?loc (Pstr_attribute a)
   let text txt =
-    <span data-count="29196">L</span>ist.map
-      (fun ds -&gt; <span data-count="164">a</span>ttribute ~loc:(docstring_loc ds) (text_attr ds))
+    <span data-count="7371">L</span>ist.map
+      (fun ds -&gt; <span data-count="0">a</span>ttribute ~loc:(docstring_loc ds) (text_attr ds))
       txt
 end
 
 module Cl = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="526">[</span>]) d =
-    <span data-count="1888">{</span>
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="134">[</span>]) d =
+    <span data-count="476">{</span>
      pcl_desc = d;
      pcl_loc = loc;
      pcl_attributes = attrs;
     }
   let attr d a = <span data-count="2">{</span>d with pcl_attributes = d.pcl_attributes @ [a]}
 
-  let constr ?loc ?attrs a b = <span data-count="120">m</span>k ?loc ?attrs (Pcl_constr (a, b))
-  let structure ?loc ?attrs a = <span data-count="418">m</span>k ?loc ?attrs (Pcl_structure a)
-  let fun_ ?loc ?attrs a b c d = <span data-count="292">m</span>k ?loc ?attrs (Pcl_fun (a, b, c, d))
-  let apply ?loc ?attrs a b = <span data-count="72">m</span>k ?loc ?attrs (Pcl_apply (a, b))
-  let let_ ?loc ?attrs a b c = <span data-count="22">m</span>k ?loc ?attrs (Pcl_let (a, b, c))
-  let constraint_ ?loc ?attrs a b = <span data-count="20">m</span>k ?loc ?attrs (Pcl_constraint (a, b))
+  let constr ?loc ?attrs a b = <span data-count="34">m</span>k ?loc ?attrs (Pcl_constr (a, b))
+  let structure ?loc ?attrs a = <span data-count="104">m</span>k ?loc ?attrs (Pcl_structure a)
+  let fun_ ?loc ?attrs a b c d = <span data-count="58">m</span>k ?loc ?attrs (Pcl_fun (a, b, c, d))
+  let apply ?loc ?attrs a b = <span data-count="16">m</span>k ?loc ?attrs (Pcl_apply (a, b))
+  let let_ ?loc ?attrs a b c = <span data-count="12">m</span>k ?loc ?attrs (Pcl_let (a, b, c))
+  let constraint_ ?loc ?attrs a b = <span data-count="14">m</span>k ?loc ?attrs (Pcl_constraint (a, b))
   let extension ?loc ?attrs a = <span data-count="0">m</span>k ?loc ?attrs (Pcl_extension a)
 end
 
 module Cty = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="63">[</span>]) d =
-    <span data-count="298">{</span>
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="42">[</span>]) d =
+    <span data-count="184">{</span>
      pcty_desc = d;
      pcty_loc = loc;
      pcty_attributes = attrs;
     }
   let attr d a = <span data-count="1">{</span>d with pcty_attributes = d.pcty_attributes @ [a]}
 
-  let constr ?loc ?attrs a b = <span data-count="42">m</span>k ?loc ?attrs (Pcty_constr (a, b))
-  let signature ?loc ?attrs a = <span data-count="86">m</span>k ?loc ?attrs (Pcty_signature a)
-  let arrow ?loc ?attrs a b c = <span data-count="20">m</span>k ?loc ?attrs (Pcty_arrow (a, b, c))
+  let constr ?loc ?attrs a b = <span data-count="34">m</span>k ?loc ?attrs (Pcty_constr (a, b))
+  let signature ?loc ?attrs a = <span data-count="50">m</span>k ?loc ?attrs (Pcty_signature a)
+  let arrow ?loc ?attrs a b c = <span data-count="8">m</span>k ?loc ?attrs (Pcty_arrow (a, b, c))
   let extension ?loc ?attrs a = <span data-count="0">m</span>k ?loc ?attrs (Pcty_extension a)
 end
 
 module Ctf = struct
   let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
-           ?(docs = <span data-count="138">e</span>mpty_docs) d =
-    <span data-count="277">{</span>
+           ?(docs = <span data-count="94">e</span>mpty_docs) d =
+    <span data-count="188">{</span>
      pctf_desc = d;
      pctf_loc = loc;
      pctf_attributes = add_docs_attrs docs attrs;
     }
 
-  let inherit_ ?loc ?attrs a = <span data-count="10">m</span>k ?loc ?attrs (Pctf_inherit a)
-  let val_ ?loc ?attrs a b c d = <span data-count="16">m</span>k ?loc ?attrs (Pctf_val (a, b, c, d))
-  let method_ ?loc ?attrs a b c d = <span data-count="106">m</span>k ?loc ?attrs (Pctf_method (a, b, c, d))
-  let constraint_ ?loc ?attrs a b = <span data-count="6">m</span>k ?loc ?attrs (Pctf_constraint (a, b))
+  let inherit_ ?loc ?attrs a = <span data-count="6">m</span>k ?loc ?attrs (Pctf_inherit a)
+  let val_ ?loc ?attrs a b c d = <span data-count="8">m</span>k ?loc ?attrs (Pctf_val (a, b, c, d))
+  let method_ ?loc ?attrs a b c d = <span data-count="76">m</span>k ?loc ?attrs (Pctf_method (a, b, c, d))
+  let constraint_ ?loc ?attrs a b = <span data-count="4">m</span>k ?loc ?attrs (Pctf_constraint (a, b))
   let extension ?loc ?attrs a = <span data-count="0">m</span>k ?loc ?attrs (Pctf_extension a)
   let attribute ?loc a = <span data-count="0">m</span>k ?loc (Pctf_attribute a)
   let text txt =
-    <span data-count="313">L</span>ist.map
+    <span data-count="194">L</span>ist.map
       (fun ds -&gt; <span data-count="0">a</span>ttribute ~loc:(docstring_loc ds) (text_attr ds))
       txt
 
@@ -1365,22 +1369,22 @@ end
 
 module Cf = struct
   let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
-        ?(docs = <span data-count="1092">e</span>mpty_docs) d =
-    <span data-count="2184">{</span>
+        ?(docs = <span data-count="272">e</span>mpty_docs) d =
+    <span data-count="544">{</span>
      pcf_desc = d;
      pcf_loc = loc;
      pcf_attributes = add_docs_attrs docs attrs;
     }
 
-  let inherit_ ?loc ?attrs a b c = <span data-count="110">m</span>k ?loc ?attrs (Pcf_inherit (a, b, c))
-  let val_ ?loc ?attrs a b c = <span data-count="200">m</span>k ?loc ?attrs (Pcf_val (a, b, c))
-  let method_ ?loc ?attrs a b c = <span data-count="730">m</span>k ?loc ?attrs (Pcf_method (a, b, c))
-  let constraint_ ?loc ?attrs a b = <span data-count="44">m</span>k ?loc ?attrs (Pcf_constraint (a, b))
+  let inherit_ ?loc ?attrs a b c = <span data-count="24">m</span>k ?loc ?attrs (Pcf_inherit (a, b, c))
+  let val_ ?loc ?attrs a b c = <span data-count="30">m</span>k ?loc ?attrs (Pcf_val (a, b, c))
+  let method_ ?loc ?attrs a b c = <span data-count="196">m</span>k ?loc ?attrs (Pcf_method (a, b, c))
+  let constraint_ ?loc ?attrs a b = <span data-count="14">m</span>k ?loc ?attrs (Pcf_constraint (a, b))
   let initializer_ ?loc ?attrs a = <span data-count="8">m</span>k ?loc ?attrs (Pcf_initializer a)
   let extension ?loc ?attrs a = <span data-count="0">m</span>k ?loc ?attrs (Pcf_extension a)
   let attribute ?loc a = <span data-count="0">m</span>k ?loc (Pcf_attribute a)
   let text txt =
-    <span data-count="2068">L</span>ist.map
+    <span data-count="520">L</span>ist.map
       (fun ds -&gt; <span data-count="0">a</span>ttribute ~loc:(docstring_loc ds) (text_attr ds))
       txt
 
@@ -1392,9 +1396,9 @@ module Cf = struct
 end
 
 module Val = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="3062">e</span>mpty_docs)
-        ?(prim = <span data-count="459">[</span>]) name typ =
-    <span data-count="6125">{</span>
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="464">e</span>mpty_docs)
+        ?(prim = <span data-count="346">[</span>]) name typ =
+    <span data-count="928">{</span>
      pval_name = name;
      pval_type = typ;
      pval_attributes = add_docs_attrs docs attrs;
@@ -1405,8 +1409,8 @@ end
 
 module Md = struct
   let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
-        ?(docs = <span data-count="166">e</span>mpty_docs) ?(text = <span data-count="328">[</span>]) name typ =
-    <span data-count="334">{</span>
+        ?(docs = <span data-count="156">e</span>mpty_docs) ?(text = <span data-count="306">[</span>]) name typ =
+    <span data-count="312">{</span>
      pmd_name = name;
      pmd_type = typ;
      pmd_attributes =
@@ -1417,8 +1421,8 @@ end
 
 module Mtd = struct
   let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
-        ?(docs = <span data-count="330">e</span>mpty_docs) ?(text = <span data-count="664">[</span>]) ?typ name =
-    <span data-count="664">{</span>
+        ?(docs = <span data-count="284">e</span>mpty_docs) ?(text = <span data-count="568">[</span>]) ?typ name =
+    <span data-count="568">{</span>
      pmtd_name = name;
      pmtd_type = typ;
      pmtd_attributes =
@@ -1429,8 +1433,8 @@ end
 
 module Mb = struct
   let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
-        ?(docs = <span data-count="1414">e</span>mpty_docs) ?(text = <span data-count="2788">[</span>]) name expr =
-    <span data-count="2840">{</span>
+        ?(docs = <span data-count="1068">e</span>mpty_docs) ?(text = <span data-count="2084">[</span>]) name expr =
+    <span data-count="2136">{</span>
      pmb_name = name;
      pmb_expr = expr;
      pmb_attributes =
@@ -1440,9 +1444,9 @@ module Mb = struct
 end
 
 module Opn = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="602">e</span>mpty_docs)
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="76">e</span>mpty_docs)
         ?(override = <span data-count="0">F</span>resh) lid =
-    <span data-count="1207">{</span>
+    <span data-count="152">{</span>
      popen_lid = lid;
      popen_override = override;
      popen_loc = loc;
@@ -1451,8 +1455,8 @@ module Opn = struct
 end
 
 module Incl = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="162">e</span>mpty_docs) mexpr =
-    <span data-count="325">{</span>
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="130">e</span>mpty_docs) mexpr =
+    <span data-count="260">{</span>
      pincl_mod = mexpr;
      pincl_loc = loc;
      pincl_attributes = add_docs_attrs docs attrs;
@@ -1461,9 +1465,9 @@ module Incl = struct
 end
 
 module Vb = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="23573">e</span>mpty_docs)
-        ?(text = <span data-count="23573">[</span>]) pat expr =
-    <span data-count="32882">{</span>
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="2218">e</span>mpty_docs)
+        ?(text = <span data-count="2218">[</span>]) pat expr =
+    <span data-count="3788">{</span>
      pvb_pat = pat;
      pvb_expr = expr;
      pvb_attributes =
@@ -1474,9 +1478,9 @@ end
 
 module Ci = struct
   let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
-        ?(docs = <span data-count="526">e</span>mpty_docs) ?(text = <span data-count="1016">[</span>])
+        ?(docs = <span data-count="178">e</span>mpty_docs) ?(text = <span data-count="350">[</span>])
         ?(virt = <span data-count="0">C</span>oncrete) ?(params = <span data-count="0">[</span>]) name expr =
-    <span data-count="1054">{</span>
+    <span data-count="356">{</span>
      pci_virt = virt;
      pci_params = params;
      pci_name = name;
@@ -1488,15 +1492,15 @@ module Ci = struct
 end
 
 module Type = struct
-  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="243">[</span>])
-        ?(docs = <span data-count="2621">e</span>mpty_docs) ?(text = <span data-count="4792">[</span>])
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="210">[</span>])
+        ?(docs = <span data-count="1826">e</span>mpty_docs) ?(text = <span data-count="3284">[</span>])
       ?(params = <span data-count="0">[</span>])
-      ?(cstrs = <span data-count="41">[</span>])
-      ?(kind = <span data-count="243">P</span>type_abstract)
-      ?(priv = <span data-count="41">P</span>ublic)
+      ?(cstrs = <span data-count="26">[</span>])
+      ?(kind = <span data-count="210">P</span>type_abstract)
+      ?(priv = <span data-count="26">P</span>ublic)
       ?manifest
       name =
-    <span data-count="4908">{</span>
+    <span data-count="3354">{</span>
      ptype_name = name;
      ptype_params = params;
      ptype_cstrs = cstrs;
@@ -1508,9 +1512,9 @@ module Type = struct
      ptype_loc = loc;
     }
 
-  let constructor ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(info = <span data-count="2848">e</span>mpty_info)
+  let constructor ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(info = <span data-count="872">e</span>mpty_info)
         ?(args = <span data-count="0">P</span>cstr_tuple []) ?res name =
-    <span data-count="5723">{</span>
+    <span data-count="1744">{</span>
      pcd_name = name;
      pcd_args = args;
      pcd_res = res;
@@ -1518,9 +1522,9 @@ module Type = struct
      pcd_attributes = add_info_attrs info attrs;
     }
 
-  let field ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(info = <span data-count="592">e</span>mpty_info)
+  let field ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(info = <span data-count="248">e</span>mpty_info)
         ?(mut = <span data-count="0">I</span>mmutable) name typ =
-    <span data-count="1184">{</span>
+    <span data-count="496">{</span>
      pld_name = name;
      pld_mutable = mut;
      pld_type = typ;
@@ -1532,9 +1536,9 @@ end
 
 (** Type extensions *)
 module Te = struct
-  let mk ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="122">e</span>mpty_docs)
+  let mk ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="114">e</span>mpty_docs)
         ?(params = <span data-count="0">[</span>]) ?(priv = <span data-count="0">P</span>ublic) path constructors =
-    <span data-count="249">{</span>
+    <span data-count="228">{</span>
      ptyext_path = path;
      ptyext_params = params;
      ptyext_constructors = constructors;
@@ -1543,17 +1547,17 @@ module Te = struct
     }
 
   let constructor ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
-        ?(docs = <span data-count="270">e</span>mpty_docs) ?(info = <span data-count="270">e</span>mpty_info) name kind =
-    <span data-count="270">{</span>
+        ?(docs = <span data-count="214">e</span>mpty_docs) ?(info = <span data-count="214">e</span>mpty_info) name kind =
+    <span data-count="214">{</span>
      pext_name = name;
      pext_kind = kind;
      pext_loc = loc;
      pext_attributes = add_docs_attrs docs (add_info_attrs info attrs);
     }
 
-  let decl ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="139">e</span>mpty_docs)
-             ?(info = <span data-count="108">e</span>mpty_info) ?(args = <span data-count="0">P</span>cstr_tuple []) ?res name =
-    <span data-count="245">{</span>
+  let decl ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="124">e</span>mpty_docs)
+             ?(info = <span data-count="60">e</span>mpty_info) ?(args = <span data-count="0">P</span>cstr_tuple []) ?res name =
+    <span data-count="184">{</span>
      pext_name = name;
      pext_kind = Pext_decl(args, res);
      pext_loc = loc;
@@ -1561,8 +1565,8 @@ module Te = struct
     }
 
   let rebind ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
-        ?(docs = <span data-count="20">e</span>mpty_docs) ?(info = <span data-count="12">e</span>mpty_info) name lid =
-    <span data-count="32">{</span>
+        ?(docs = <span data-count="20">e</span>mpty_docs) ?(info = <span data-count="10">e</span>mpty_info) name lid =
+    <span data-count="30">{</span>
      pext_name = name;
      pext_kind = Pext_rebind lid;
      pext_loc = loc;
@@ -1573,7 +1577,7 @@ end
 
 module Csig = struct
   let mk self fields =
-    <span data-count="173">{</span>
+    <span data-count="100">{</span>
      pcsig_self = self;
      pcsig_fields = fields;
     }
@@ -1581,7 +1585,7 @@ end
 
 module Cstr = struct
   let mk self fields =
-    <span data-count="488">{</span>
+    <span data-count="124">{</span>
      pcstr_self = self;
      pcstr_fields = fields;
     }
@@ -1589,7 +1593,7 @@ end
 </pre>
       </div>
     </div>
-    <div id="footer">Generated by on 2016-05-14 23:27:35 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <div id="footer">Generated by on 2016-05-15 14:44:58 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
     <script src="coverage.js"></script>
   </body>
 </html>

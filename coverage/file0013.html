@@ -11,10 +11,11 @@
           <span class="dirname">src/utils/</span>warnings.ml
         </a>
       </h1>
-      <h2>26.22%</h2>
+      <h2>23.08%</h2>
     </div>
     <div id="navbar">
       <span class="unvisited" style="top:15.54%"></span>
+      <span class="unvisited" style="top:15.71%"></span>
       <span class="unvisited" style="top:15.88%"></span>
       <span class="unvisited" style="top:16.05%"></span>
       <span class="unvisited" style="top:16.22%"></span>
@@ -114,6 +115,7 @@
       <span class="unvisited" style="top:42.57%"></span>
       <span class="unvisited" style="top:43.24%"></span>
       <span class="unvisited" style="top:46.45%"></span>
+      <span class="unvisited" style="top:46.62%"></span>
       <span class="unvisited" style="top:46.79%"></span>
       <span class="unvisited" style="top:48.14%"></span>
       <span class="unvisited" style="top:48.48%"></span>
@@ -200,7 +202,11 @@
       <span class="unvisited" style="top:78.21%"></span>
       <span class="unvisited" style="top:78.89%"></span>
       <span class="unvisited" style="top:79.56%"></span>
-      <span class="some-visited" style="top:81.76%"></span>
+      <span class="unvisited" style="top:81.08%"></span>
+      <span class="unvisited" style="top:81.25%"></span>
+      <span class="unvisited" style="top:81.42%"></span>
+      <span class="unvisited" style="top:81.59%"></span>
+      <span class="unvisited" style="top:81.76%"></span>
       <span class="unvisited" style="top:82.77%"></span>
       <span class="unvisited" style="top:83.28%"></span>
       <span class="unvisited" style="top:83.45%"></span>
@@ -311,7 +317,7 @@
 <a id="L90"></a><span > </span>
 <a id="L91"></a><span class="visited"> </span>
 <a id="L92"></a><span class="unvisited"> </span>
-<a id="L93"></a><span class="visited"> </span>
+<a id="L93"></a><span class="unvisited"> </span>
 <a id="L94"></a><span class="unvisited"> </span>
 <a id="L95"></a><span class="unvisited"> </span>
 <a id="L96"></a><span class="unvisited"> </span>
@@ -494,7 +500,7 @@
 <a id="L273"></a><span > </span>
 <a id="L274"></a><span class="visited"> </span>
 <a id="L275"></a><span class="unvisited"> </span>
-<a id="L276"></a><span class="visited"> </span>
+<a id="L276"></a><span class="unvisited"> </span>
 <a id="L277"></a><span class="unvisited"> </span>
 <a id="L278"></a><span > </span>
 <a id="L279"></a><span > </span>
@@ -698,11 +704,11 @@
 <a id="L477"></a><span class="visited"> </span>
 <a id="L478"></a><span > </span>
 <a id="L479"></a><span > </span>
-<a id="L480"></a><span class="visited"> </span>
-<a id="L481"></a><span class="visited"> </span>
-<a id="L482"></a><span class="visited"> </span>
-<a id="L483"></a><span class="visited"> </span>
-<a id="L484"></a><span class="some-visited"> </span>
+<a id="L480"></a><span class="unvisited"> </span>
+<a id="L481"></a><span class="unvisited"> </span>
+<a id="L482"></a><span class="unvisited"> </span>
+<a id="L483"></a><span class="unvisited"> </span>
+<a id="L484"></a><span class="unvisited"> </span>
 <a id="L485"></a><span > </span>
 <a id="L486"></a><span > </span>
 <a id="L487"></a><span > </span>
@@ -1501,7 +1507,7 @@ type t =
 
 let number = <span data-count="1">f</span>unction
   | <span data-count="0">C</span>omment_start -&gt; 1
-  | <span data-count="2">C</span>omment_not_end -&gt; 2
+  | <span data-count="0">C</span>omment_not_end -&gt; 2
   | <span data-count="0">D</span>eprecated _ -&gt; 3
   | <span data-count="0">F</span>ragile_match _ -&gt; 4
   | <span data-count="0">P</span>artial_application -&gt; 5
@@ -1549,7 +1555,7 @@ let number = <span data-count="1">f</span>unction
   | <span data-count="0">A</span>ttribute_payload _ -&gt; 47
   | <span data-count="0">E</span>liminated_optional_arguments _ -&gt; 48
   | <span data-count="0">N</span>o_cmi_file _ -&gt; 49
-  | <span data-count="1221">B</span>ad_docstring _ -&gt; 50
+  | <span data-count="2">B</span>ad_docstring _ -&gt; 50
   | <span data-count="0">E</span>xpect_tailcall -&gt; 51
   | <span data-count="0">F</span>ragile_literal_pattern -&gt; 52
   | <span data-count="0">M</span>isplaced_attribute _ -&gt; 53
@@ -1615,7 +1621,7 @@ let backup () = <span data-count="0">!</span>current
 
 let restore x = <span data-count="0">c</span>urrent := x
 
-let is_active x = <span data-count="1222">(</span>!current).active.(number x);;
+let is_active x = <span data-count="2">(</span>!current).active.(number x);;
 let is_error x = <span data-count="0">(</span>!current).error.(number x);;
 
 let parse_opt error active flags s =
@@ -1684,7 +1690,7 @@ let () = <span data-count="1">p</span>arse_options true defaults_warn_error;;
 
 let message = <span data-count="1">f</span>unction
   | <span data-count="0">C</span>omment_start -&gt; "this is the start of a comment."
-  | <span data-count="1">C</span>omment_not_end -&gt; "this is not the end of a comment."
+  | <span data-count="0">C</span>omment_not_end -&gt; "this is not the end of a comment."
   | <span data-count="0">D</span>eprecated s -&gt;
       (* Reduce \r\n to \n:
            - Prevents any \r characters being printed on Unix when processing
@@ -1888,11 +1894,11 @@ let message = <span data-count="1">f</span>unction
 let nerrors = <span data-count="1">r</span>ef 0;;
 
 let print ppf w =
-  <span data-count="1">l</span>et msg = <span data-count="1">m</span>essage w in
-  <span data-count="1">l</span>et num = <span data-count="1">n</span>umber w in
-  <span data-count="1">F</span>ormat.fprintf ppf "%d: %s" num msg;
-  <span data-count="1">F</span>ormat.pp_print_flush ppf ();
-  <span data-count="1">i</span>f (!current).error.(num) then <span data-count="0">i</span>ncr nerrors
+  <span data-count="0">l</span>et msg = <span data-count="0">m</span>essage w in
+  <span data-count="0">l</span>et num = <span data-count="0">n</span>umber w in
+  <span data-count="0">F</span>ormat.fprintf ppf "%d: %s" num msg;
+  <span data-count="0">F</span>ormat.pp_print_flush ppf ();
+  <span data-count="0">i</span>f (!current).error.(num) then <span data-count="0">i</span>ncr nerrors
 ;;
 
 exception Errors of int;;
@@ -2004,7 +2010,7 @@ let help_warnings () =
 </pre>
       </div>
     </div>
-    <div id="footer">Generated by on 2016-05-14 23:27:35 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <div id="footer">Generated by on 2016-05-15 14:44:58 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
     <script src="coverage.js"></script>
   </body>
 </html>

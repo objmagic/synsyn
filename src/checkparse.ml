@@ -58,19 +58,23 @@ let test parse_fun pprint print map filename =
       | exception exn ->
           Printf.printf "%s: FAIL, CANNOT REPARSE\n" filename;
           report_err exn;
+(*
           print_endline str;
+*)
           print_endline "====================================================="
       | ast2 ->
           let ast = map remove_locs remove_locs ast in
           let ast2 = map remove_locs remove_locs ast2 in
           if ast <> ast2 then begin
+            Printf.printf "%s\n" filename; (*
             Printf.printf "%s:  FAIL, REPARSED AST IS DIFFERENT\n%!" filename;
             let f1 = to_tmp_file print ast in
             let f2 = to_tmp_file print ast2 in
-            let cmd = Printf.sprintf "diff -u %s %s" (Filename.quote f1) (Filename.quote f2) in
+            let cmd = Printf.sprintf "diff -u %s %s" 
+                (Filename.quote f1) (Filename.quote f2) in
             let _ret = Sys.command cmd in
             Sys.remove f1;
-            Sys.remove f2;
+            Sys.remove f2; *)
             print_endline "====================================================="
           end
 
@@ -84,19 +88,6 @@ let rec process path =
     Array.iter (fun s -> process (Filename.concat path s)) files
   else if Filename.check_suffix path ".ml" then
     test
-(*
-      (fun lexbuf -> List.filter (fun x -> x <> Parsetree.Ptop_def [])
-          (Parse.use_file lexbuf))
-      (fun ppf -> List.iter (Format.fprintf ppf "%a@." Pprintast.toplevel_phrase))
-      (fun ppf -> List.iter (Printast.top_phrase ppf))
-      (fun mapper _ ->
-         List.map
-           (function
-             | Parsetree.Ptop_dir _ as d -> d
-             | Parsetree.Ptop_def str -> Ptop_def (mapper.structure mapper str)
-           )
-      )
-*)
       Parse.implementation
       Pprintast.structure
       Printast.implementation
