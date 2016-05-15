@@ -1,0 +1,1595 @@
+<html>
+  <head>
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        <a href="index.html">
+          <span class="dirname">src/parsing/</span>ast_helper.ml
+        </a>
+      </h1>
+      <h2>69.49%</h2>
+    </div>
+    <div id="navbar">
+      <span class="unvisited" style="top:6.01%"></span>
+      <span class="unvisited" style="top:6.21%"></span>
+      <span class="unvisited" style="top:6.41%"></span>
+      <span class="unvisited" style="top:6.61%"></span>
+      <span class="unvisited" style="top:7.21%"></span>
+      <span class="unvisited" style="top:7.41%"></span>
+      <span class="unvisited" style="top:7.62%"></span>
+      <span class="unvisited" style="top:7.82%"></span>
+      <span class="unvisited" style="top:8.02%"></span>
+      <span class="unvisited" style="top:8.22%"></span>
+      <span class="unvisited" style="top:8.42%"></span>
+      <span class="unvisited" style="top:8.62%"></span>
+      <span class="some-visited" style="top:9.42%"></span>
+      <span class="unvisited" style="top:13.03%"></span>
+      <span class="unvisited" style="top:13.23%"></span>
+      <span class="unvisited" style="top:13.43%"></span>
+      <span class="some-visited" style="top:14.23%"></span>
+      <span class="unvisited" style="top:18.04%"></span>
+      <span class="some-visited" style="top:19.24%"></span>
+      <span class="some-visited" style="top:29.26%"></span>
+      <span class="some-visited" style="top:32.06%"></span>
+      <span class="some-visited" style="top:35.07%"></span>
+      <span class="some-visited" style="top:37.68%"></span>
+      <span class="unvisited" style="top:38.48%"></span>
+      <span class="some-visited" style="top:39.48%"></span>
+      <span class="some-visited" style="top:39.88%"></span>
+      <span class="some-visited" style="top:42.48%"></span>
+      <span class="some-visited" style="top:44.29%"></span>
+      <span class="unvisited" style="top:47.09%"></span>
+      <span class="some-visited" style="top:47.90%"></span>
+      <span class="unvisited" style="top:50.10%"></span>
+      <span class="unvisited" style="top:50.90%"></span>
+      <span class="unvisited" style="top:53.31%"></span>
+      <span class="unvisited" style="top:53.51%"></span>
+      <span class="unvisited" style="top:54.11%"></span>
+      <span class="unvisited" style="top:54.71%"></span>
+      <span class="unvisited" style="top:55.71%"></span>
+      <span class="unvisited" style="top:58.32%"></span>
+      <span class="unvisited" style="top:58.52%"></span>
+      <span class="unvisited" style="top:59.12%"></span>
+      <span class="unvisited" style="top:59.72%"></span>
+      <span class="unvisited" style="top:59.92%"></span>
+      <span class="unvisited" style="top:60.32%"></span>
+      <span class="some-visited" style="top:61.32%"></span>
+      <span class="unvisited" style="top:63.73%"></span>
+      <span class="unvisited" style="top:66.13%"></span>
+      <span class="unvisited" style="top:68.54%"></span>
+      <span class="some-visited" style="top:70.94%"></span>
+      <span class="unvisited" style="top:71.14%"></span>
+      <span class="some-visited" style="top:73.15%"></span>
+      <span class="some-visited" style="top:75.15%"></span>
+      <span class="unvisited" style="top:77.56%"></span>
+      <span class="unvisited" style="top:77.96%"></span>
+      <span class="some-visited" style="top:80.56%"></span>
+      <span class="unvisited" style="top:80.96%"></span>
+      <span class="some-visited" style="top:84.57%"></span>
+      <span class="unvisited" style="top:84.77%"></span>
+      <span class="some-visited" style="top:86.57%"></span>
+      <span class="unvisited" style="top:86.77%"></span>
+      <span class="some-visited" style="top:89.38%"></span>
+      <span class="unvisited" style="top:89.58%"></span>
+      <span class="unvisited" style="top:91.38%"></span>
+      <span class="some-visited" style="top:93.19%"></span>
+      <span class="some-visited" style="top:93.39%"></span>
+      <span class="unvisited" style="top:94.99%"></span>
+    </div>
+    <div id="report">
+      <div id="lines-layer">
+        <pre>
+<a id="L1"></a><span > </span>
+<a id="L2"></a><span > </span>
+<a id="L3"></a><span > </span>
+<a id="L4"></a><span > </span>
+<a id="L5"></a><span > </span>
+<a id="L6"></a><span > </span>
+<a id="L7"></a><span > </span>
+<a id="L8"></a><span > </span>
+<a id="L9"></a><span > </span>
+<a id="L10"></a><span > </span>
+<a id="L11"></a><span > </span>
+<a id="L12"></a><span > </span>
+<a id="L13"></a><span > </span>
+<a id="L14"></a><span > </span>
+<a id="L15"></a><span > </span>
+<a id="L16"></a><span > </span>
+<a id="L17"></a><span > </span>
+<a id="L18"></a><span > </span>
+<a id="L19"></a><span > </span>
+<a id="L20"></a><span > </span>
+<a id="L21"></a><span > </span>
+<a id="L22"></a><span > </span>
+<a id="L23"></a><span > </span>
+<a id="L24"></a><span > </span>
+<a id="L25"></a><span > </span>
+<a id="L26"></a><span > </span>
+<a id="L27"></a><span class="visited"> </span>
+<a id="L28"></a><span > </span>
+<a id="L29"></a><span > </span>
+<a id="L30"></a><span class="unvisited"> </span>
+<a id="L31"></a><span class="unvisited"> </span>
+<a id="L32"></a><span class="unvisited"> </span>
+<a id="L33"></a><span class="unvisited"> </span>
+<a id="L34"></a><span > </span>
+<a id="L35"></a><span > </span>
+<a id="L36"></a><span class="unvisited"> </span>
+<a id="L37"></a><span class="unvisited"> </span>
+<a id="L38"></a><span class="unvisited"> </span>
+<a id="L39"></a><span class="unvisited"> </span>
+<a id="L40"></a><span class="unvisited"> </span>
+<a id="L41"></a><span class="unvisited"> </span>
+<a id="L42"></a><span class="unvisited"> </span>
+<a id="L43"></a><span class="unvisited"> </span>
+<a id="L44"></a><span > </span>
+<a id="L45"></a><span > </span>
+<a id="L46"></a><span > </span>
+<a id="L47"></a><span class="some-visited"> </span>
+<a id="L48"></a><span class="visited"> </span>
+<a id="L49"></a><span class="visited"> </span>
+<a id="L50"></a><span > </span>
+<a id="L51"></a><span class="visited"> </span>
+<a id="L52"></a><span class="visited"> </span>
+<a id="L53"></a><span class="visited"> </span>
+<a id="L54"></a><span class="visited"> </span>
+<a id="L55"></a><span class="visited"> </span>
+<a id="L56"></a><span class="visited"> </span>
+<a id="L57"></a><span class="visited"> </span>
+<a id="L58"></a><span class="visited"> </span>
+<a id="L59"></a><span class="visited"> </span>
+<a id="L60"></a><span class="visited"> </span>
+<a id="L61"></a><span class="visited"> </span>
+<a id="L62"></a><span class="visited"> </span>
+<a id="L63"></a><span > </span>
+<a id="L64"></a><span > </span>
+<a id="L65"></a><span class="unvisited"> </span>
+<a id="L66"></a><span class="unvisited"> </span>
+<a id="L67"></a><span class="unvisited"> </span>
+<a id="L68"></a><span > </span>
+<a id="L69"></a><span > </span>
+<a id="L70"></a><span > </span>
+<a id="L71"></a><span class="some-visited"> </span>
+<a id="L72"></a><span class="visited"> </span>
+<a id="L73"></a><span class="visited"> </span>
+<a id="L74"></a><span > </span>
+<a id="L75"></a><span class="visited"> </span>
+<a id="L76"></a><span class="visited"> </span>
+<a id="L77"></a><span class="visited"> </span>
+<a id="L78"></a><span class="visited"> </span>
+<a id="L79"></a><span class="visited"> </span>
+<a id="L80"></a><span class="visited"> </span>
+<a id="L81"></a><span class="visited"> </span>
+<a id="L82"></a><span class="visited"> </span>
+<a id="L83"></a><span class="visited"> </span>
+<a id="L84"></a><span class="visited"> </span>
+<a id="L85"></a><span class="visited"> </span>
+<a id="L86"></a><span class="visited"> </span>
+<a id="L87"></a><span class="visited"> </span>
+<a id="L88"></a><span class="visited"> </span>
+<a id="L89"></a><span class="visited"> </span>
+<a id="L90"></a><span class="unvisited"> </span>
+<a id="L91"></a><span class="visited"> </span>
+<a id="L92"></a><span class="visited"> </span>
+<a id="L93"></a><span > </span>
+<a id="L94"></a><span > </span>
+<a id="L95"></a><span > </span>
+<a id="L96"></a><span class="some-visited"> </span>
+<a id="L97"></a><span class="visited"> </span>
+<a id="L98"></a><span class="visited"> </span>
+<a id="L99"></a><span > </span>
+<a id="L100"></a><span class="visited"> </span>
+<a id="L101"></a><span class="visited"> </span>
+<a id="L102"></a><span class="visited"> </span>
+<a id="L103"></a><span class="visited"> </span>
+<a id="L104"></a><span class="visited"> </span>
+<a id="L105"></a><span class="visited"> </span>
+<a id="L106"></a><span class="visited"> </span>
+<a id="L107"></a><span class="visited"> </span>
+<a id="L108"></a><span class="visited"> </span>
+<a id="L109"></a><span class="visited"> </span>
+<a id="L110"></a><span class="visited"> </span>
+<a id="L111"></a><span class="visited"> </span>
+<a id="L112"></a><span class="visited"> </span>
+<a id="L113"></a><span class="visited"> </span>
+<a id="L114"></a><span class="visited"> </span>
+<a id="L115"></a><span class="visited"> </span>
+<a id="L116"></a><span class="visited"> </span>
+<a id="L117"></a><span class="visited"> </span>
+<a id="L118"></a><span class="visited"> </span>
+<a id="L119"></a><span class="visited"> </span>
+<a id="L120"></a><span class="visited"> </span>
+<a id="L121"></a><span class="visited"> </span>
+<a id="L122"></a><span class="visited"> </span>
+<a id="L123"></a><span class="visited"> </span>
+<a id="L124"></a><span class="visited"> </span>
+<a id="L125"></a><span class="visited"> </span>
+<a id="L126"></a><span class="visited"> </span>
+<a id="L127"></a><span class="visited"> </span>
+<a id="L128"></a><span class="visited"> </span>
+<a id="L129"></a><span class="visited"> </span>
+<a id="L130"></a><span class="visited"> </span>
+<a id="L131"></a><span class="visited"> </span>
+<a id="L132"></a><span class="visited"> </span>
+<a id="L133"></a><span class="visited"> </span>
+<a id="L134"></a><span class="visited"> </span>
+<a id="L135"></a><span class="visited"> </span>
+<a id="L136"></a><span > </span>
+<a id="L137"></a><span > </span>
+<a id="L138"></a><span class="visited"> </span>
+<a id="L139"></a><span > </span>
+<a id="L140"></a><span > </span>
+<a id="L141"></a><span > </span>
+<a id="L142"></a><span > </span>
+<a id="L143"></a><span > </span>
+<a id="L144"></a><span > </span>
+<a id="L145"></a><span > </span>
+<a id="L146"></a><span class="some-visited"> </span>
+<a id="L147"></a><span class="visited"> </span>
+<a id="L148"></a><span class="visited"> </span>
+<a id="L149"></a><span > </span>
+<a id="L150"></a><span class="visited"> </span>
+<a id="L151"></a><span class="visited"> </span>
+<a id="L152"></a><span class="visited"> </span>
+<a id="L153"></a><span class="visited"> </span>
+<a id="L154"></a><span class="visited"> </span>
+<a id="L155"></a><span class="visited"> </span>
+<a id="L156"></a><span class="visited"> </span>
+<a id="L157"></a><span > </span>
+<a id="L158"></a><span > </span>
+<a id="L159"></a><span > </span>
+<a id="L160"></a><span class="some-visited"> </span>
+<a id="L161"></a><span class="visited"> </span>
+<a id="L162"></a><span class="visited"> </span>
+<a id="L163"></a><span > </span>
+<a id="L164"></a><span class="visited"> </span>
+<a id="L165"></a><span class="visited"> </span>
+<a id="L166"></a><span > </span>
+<a id="L167"></a><span class="visited"> </span>
+<a id="L168"></a><span class="visited"> </span>
+<a id="L169"></a><span class="visited"> </span>
+<a id="L170"></a><span class="visited"> </span>
+<a id="L171"></a><span class="visited"> </span>
+<a id="L172"></a><span > </span>
+<a id="L173"></a><span > </span>
+<a id="L174"></a><span > </span>
+<a id="L175"></a><span class="some-visited"> </span>
+<a id="L176"></a><span > </span>
+<a id="L177"></a><span class="visited"> </span>
+<a id="L178"></a><span class="visited"> </span>
+<a id="L179"></a><span class="visited"> </span>
+<a id="L180"></a><span class="visited"> </span>
+<a id="L181"></a><span class="visited"> </span>
+<a id="L182"></a><span class="visited"> </span>
+<a id="L183"></a><span class="visited"> </span>
+<a id="L184"></a><span class="visited"> </span>
+<a id="L185"></a><span class="visited"> </span>
+<a id="L186"></a><span class="visited"> </span>
+<a id="L187"></a><span class="visited"> </span>
+<a id="L188"></a><span class="some-visited"> </span>
+<a id="L189"></a><span class="visited"> </span>
+<a id="L190"></a><span > </span>
+<a id="L191"></a><span class="visited"> </span>
+<a id="L192"></a><span class="unvisited"> </span>
+<a id="L193"></a><span > </span>
+<a id="L194"></a><span > </span>
+<a id="L195"></a><span > </span>
+<a id="L196"></a><span > </span>
+<a id="L197"></a><span class="some-visited"> </span>
+<a id="L198"></a><span > </span>
+<a id="L199"></a><span class="some-visited"> </span>
+<a id="L200"></a><span class="visited"> </span>
+<a id="L201"></a><span class="visited"> </span>
+<a id="L202"></a><span class="visited"> </span>
+<a id="L203"></a><span class="visited"> </span>
+<a id="L204"></a><span class="visited"> </span>
+<a id="L205"></a><span class="visited"> </span>
+<a id="L206"></a><span class="visited"> </span>
+<a id="L207"></a><span class="visited"> </span>
+<a id="L208"></a><span class="visited"> </span>
+<a id="L209"></a><span class="visited"> </span>
+<a id="L210"></a><span class="visited"> </span>
+<a id="L211"></a><span class="visited"> </span>
+<a id="L212"></a><span class="some-visited"> </span>
+<a id="L213"></a><span class="visited"> </span>
+<a id="L214"></a><span > </span>
+<a id="L215"></a><span class="visited"> </span>
+<a id="L216"></a><span class="visited"> </span>
+<a id="L217"></a><span > </span>
+<a id="L218"></a><span > </span>
+<a id="L219"></a><span > </span>
+<a id="L220"></a><span > </span>
+<a id="L221"></a><span class="some-visited"> </span>
+<a id="L222"></a><span class="visited"> </span>
+<a id="L223"></a><span > </span>
+<a id="L224"></a><span > </span>
+<a id="L225"></a><span > </span>
+<a id="L226"></a><span > </span>
+<a id="L227"></a><span class="visited"> </span>
+<a id="L228"></a><span > </span>
+<a id="L229"></a><span class="visited"> </span>
+<a id="L230"></a><span class="visited"> </span>
+<a id="L231"></a><span class="visited"> </span>
+<a id="L232"></a><span class="visited"> </span>
+<a id="L233"></a><span class="visited"> </span>
+<a id="L234"></a><span class="visited"> </span>
+<a id="L235"></a><span class="unvisited"> </span>
+<a id="L236"></a><span > </span>
+<a id="L237"></a><span > </span>
+<a id="L238"></a><span > </span>
+<a id="L239"></a><span class="some-visited"> </span>
+<a id="L240"></a><span class="visited"> </span>
+<a id="L241"></a><span > </span>
+<a id="L242"></a><span > </span>
+<a id="L243"></a><span > </span>
+<a id="L244"></a><span > </span>
+<a id="L245"></a><span class="visited"> </span>
+<a id="L246"></a><span > </span>
+<a id="L247"></a><span class="visited"> </span>
+<a id="L248"></a><span class="visited"> </span>
+<a id="L249"></a><span class="visited"> </span>
+<a id="L250"></a><span class="unvisited"> </span>
+<a id="L251"></a><span > </span>
+<a id="L252"></a><span > </span>
+<a id="L253"></a><span > </span>
+<a id="L254"></a><span class="unvisited"> </span>
+<a id="L255"></a><span class="visited"> </span>
+<a id="L256"></a><span class="visited"> </span>
+<a id="L257"></a><span > </span>
+<a id="L258"></a><span > </span>
+<a id="L259"></a><span > </span>
+<a id="L260"></a><span > </span>
+<a id="L261"></a><span > </span>
+<a id="L262"></a><span class="visited"> </span>
+<a id="L263"></a><span class="visited"> </span>
+<a id="L264"></a><span class="visited"> </span>
+<a id="L265"></a><span class="visited"> </span>
+<a id="L266"></a><span class="unvisited"> </span>
+<a id="L267"></a><span class="unvisited"> </span>
+<a id="L268"></a><span > </span>
+<a id="L269"></a><span class="visited"> </span>
+<a id="L270"></a><span class="unvisited"> </span>
+<a id="L271"></a><span > </span>
+<a id="L272"></a><span > </span>
+<a id="L273"></a><span class="unvisited"> </span>
+<a id="L274"></a><span > </span>
+<a id="L275"></a><span > </span>
+<a id="L276"></a><span > </span>
+<a id="L277"></a><span > </span>
+<a id="L278"></a><span class="unvisited"> </span>
+<a id="L279"></a><span class="visited"> </span>
+<a id="L280"></a><span class="visited"> </span>
+<a id="L281"></a><span > </span>
+<a id="L282"></a><span > </span>
+<a id="L283"></a><span > </span>
+<a id="L284"></a><span > </span>
+<a id="L285"></a><span > </span>
+<a id="L286"></a><span class="visited"> </span>
+<a id="L287"></a><span class="visited"> </span>
+<a id="L288"></a><span class="visited"> </span>
+<a id="L289"></a><span class="visited"> </span>
+<a id="L290"></a><span class="visited"> </span>
+<a id="L291"></a><span class="unvisited"> </span>
+<a id="L292"></a><span class="unvisited"> </span>
+<a id="L293"></a><span > </span>
+<a id="L294"></a><span class="visited"> </span>
+<a id="L295"></a><span class="unvisited"> </span>
+<a id="L296"></a><span > </span>
+<a id="L297"></a><span > </span>
+<a id="L298"></a><span class="unvisited"> </span>
+<a id="L299"></a><span class="unvisited"> </span>
+<a id="L300"></a><span > </span>
+<a id="L301"></a><span class="unvisited"> </span>
+<a id="L302"></a><span > </span>
+<a id="L303"></a><span > </span>
+<a id="L304"></a><span > </span>
+<a id="L305"></a><span > </span>
+<a id="L306"></a><span class="some-visited"> </span>
+<a id="L307"></a><span class="visited"> </span>
+<a id="L308"></a><span class="visited"> </span>
+<a id="L309"></a><span > </span>
+<a id="L310"></a><span > </span>
+<a id="L311"></a><span > </span>
+<a id="L312"></a><span > </span>
+<a id="L313"></a><span > </span>
+<a id="L314"></a><span > </span>
+<a id="L315"></a><span > </span>
+<a id="L316"></a><span > </span>
+<a id="L317"></a><span > </span>
+<a id="L318"></a><span class="unvisited"> </span>
+<a id="L319"></a><span class="visited"> </span>
+<a id="L320"></a><span class="visited"> </span>
+<a id="L321"></a><span > </span>
+<a id="L322"></a><span > </span>
+<a id="L323"></a><span > </span>
+<a id="L324"></a><span > </span>
+<a id="L325"></a><span > </span>
+<a id="L326"></a><span > </span>
+<a id="L327"></a><span > </span>
+<a id="L328"></a><span > </span>
+<a id="L329"></a><span > </span>
+<a id="L330"></a><span class="unvisited"> </span>
+<a id="L331"></a><span class="visited"> </span>
+<a id="L332"></a><span class="visited"> </span>
+<a id="L333"></a><span > </span>
+<a id="L334"></a><span > </span>
+<a id="L335"></a><span > </span>
+<a id="L336"></a><span > </span>
+<a id="L337"></a><span > </span>
+<a id="L338"></a><span > </span>
+<a id="L339"></a><span > </span>
+<a id="L340"></a><span > </span>
+<a id="L341"></a><span > </span>
+<a id="L342"></a><span class="unvisited"> </span>
+<a id="L343"></a><span class="visited"> </span>
+<a id="L344"></a><span class="visited"> </span>
+<a id="L345"></a><span > </span>
+<a id="L346"></a><span > </span>
+<a id="L347"></a><span > </span>
+<a id="L348"></a><span > </span>
+<a id="L349"></a><span > </span>
+<a id="L350"></a><span > </span>
+<a id="L351"></a><span > </span>
+<a id="L352"></a><span > </span>
+<a id="L353"></a><span > </span>
+<a id="L354"></a><span class="some-visited"> </span>
+<a id="L355"></a><span class="unvisited"> </span>
+<a id="L356"></a><span class="visited"> </span>
+<a id="L357"></a><span > </span>
+<a id="L358"></a><span > </span>
+<a id="L359"></a><span > </span>
+<a id="L360"></a><span > </span>
+<a id="L361"></a><span > </span>
+<a id="L362"></a><span > </span>
+<a id="L363"></a><span > </span>
+<a id="L364"></a><span > </span>
+<a id="L365"></a><span class="some-visited"> </span>
+<a id="L366"></a><span class="visited"> </span>
+<a id="L367"></a><span > </span>
+<a id="L368"></a><span > </span>
+<a id="L369"></a><span > </span>
+<a id="L370"></a><span > </span>
+<a id="L371"></a><span > </span>
+<a id="L372"></a><span > </span>
+<a id="L373"></a><span > </span>
+<a id="L374"></a><span > </span>
+<a id="L375"></a><span class="some-visited"> </span>
+<a id="L376"></a><span class="visited"> </span>
+<a id="L377"></a><span class="visited"> </span>
+<a id="L378"></a><span > </span>
+<a id="L379"></a><span > </span>
+<a id="L380"></a><span > </span>
+<a id="L381"></a><span > </span>
+<a id="L382"></a><span > </span>
+<a id="L383"></a><span > </span>
+<a id="L384"></a><span > </span>
+<a id="L385"></a><span > </span>
+<a id="L386"></a><span > </span>
+<a id="L387"></a><span class="unvisited"> </span>
+<a id="L388"></a><span class="visited"> </span>
+<a id="L389"></a><span class="unvisited"> </span>
+<a id="L390"></a><span class="visited"> </span>
+<a id="L391"></a><span > </span>
+<a id="L392"></a><span > </span>
+<a id="L393"></a><span > </span>
+<a id="L394"></a><span > </span>
+<a id="L395"></a><span > </span>
+<a id="L396"></a><span > </span>
+<a id="L397"></a><span > </span>
+<a id="L398"></a><span > </span>
+<a id="L399"></a><span > </span>
+<a id="L400"></a><span > </span>
+<a id="L401"></a><span > </span>
+<a id="L402"></a><span class="some-visited"> </span>
+<a id="L403"></a><span class="visited"> </span>
+<a id="L404"></a><span class="unvisited"> </span>
+<a id="L405"></a><span class="visited"> </span>
+<a id="L406"></a><span class="visited"> </span>
+<a id="L407"></a><span class="visited"> </span>
+<a id="L408"></a><span > </span>
+<a id="L409"></a><span > </span>
+<a id="L410"></a><span class="visited"> </span>
+<a id="L411"></a><span > </span>
+<a id="L412"></a><span > </span>
+<a id="L413"></a><span > </span>
+<a id="L414"></a><span > </span>
+<a id="L415"></a><span > </span>
+<a id="L416"></a><span > </span>
+<a id="L417"></a><span > </span>
+<a id="L418"></a><span > </span>
+<a id="L419"></a><span > </span>
+<a id="L420"></a><span > </span>
+<a id="L421"></a><span > </span>
+<a id="L422"></a><span class="some-visited"> </span>
+<a id="L423"></a><span class="unvisited"> </span>
+<a id="L424"></a><span class="visited"> </span>
+<a id="L425"></a><span > </span>
+<a id="L426"></a><span > </span>
+<a id="L427"></a><span > </span>
+<a id="L428"></a><span > </span>
+<a id="L429"></a><span > </span>
+<a id="L430"></a><span > </span>
+<a id="L431"></a><span > </span>
+<a id="L432"></a><span class="some-visited"> </span>
+<a id="L433"></a><span class="unvisited"> </span>
+<a id="L434"></a><span class="visited"> </span>
+<a id="L435"></a><span > </span>
+<a id="L436"></a><span > </span>
+<a id="L437"></a><span > </span>
+<a id="L438"></a><span > </span>
+<a id="L439"></a><span > </span>
+<a id="L440"></a><span > </span>
+<a id="L441"></a><span > </span>
+<a id="L442"></a><span > </span>
+<a id="L443"></a><span > </span>
+<a id="L444"></a><span > </span>
+<a id="L445"></a><span > </span>
+<a id="L446"></a><span class="some-visited"> </span>
+<a id="L447"></a><span class="unvisited"> </span>
+<a id="L448"></a><span class="visited"> </span>
+<a id="L449"></a><span > </span>
+<a id="L450"></a><span > </span>
+<a id="L451"></a><span > </span>
+<a id="L452"></a><span > </span>
+<a id="L453"></a><span > </span>
+<a id="L454"></a><span > </span>
+<a id="L455"></a><span > </span>
+<a id="L456"></a><span class="unvisited"> </span>
+<a id="L457"></a><span class="visited"> </span>
+<a id="L458"></a><span class="visited"> </span>
+<a id="L459"></a><span > </span>
+<a id="L460"></a><span > </span>
+<a id="L461"></a><span > </span>
+<a id="L462"></a><span > </span>
+<a id="L463"></a><span > </span>
+<a id="L464"></a><span > </span>
+<a id="L465"></a><span class="some-visited"> </span>
+<a id="L466"></a><span class="some-visited"> </span>
+<a id="L467"></a><span class="visited"> </span>
+<a id="L468"></a><span > </span>
+<a id="L469"></a><span > </span>
+<a id="L470"></a><span > </span>
+<a id="L471"></a><span > </span>
+<a id="L472"></a><span > </span>
+<a id="L473"></a><span > </span>
+<a id="L474"></a><span class="unvisited"> </span>
+<a id="L475"></a><span class="visited"> </span>
+<a id="L476"></a><span class="visited"> </span>
+<a id="L477"></a><span > </span>
+<a id="L478"></a><span > </span>
+<a id="L479"></a><span > </span>
+<a id="L480"></a><span > </span>
+<a id="L481"></a><span > </span>
+<a id="L482"></a><span > </span>
+<a id="L483"></a><span > </span>
+<a id="L484"></a><span > </span>
+<a id="L485"></a><span > </span>
+<a id="L486"></a><span > </span>
+<a id="L487"></a><span class="visited"> </span>
+<a id="L488"></a><span > </span>
+<a id="L489"></a><span > </span>
+<a id="L490"></a><span > </span>
+<a id="L491"></a><span > </span>
+<a id="L492"></a><span > </span>
+<a id="L493"></a><span > </span>
+<a id="L494"></a><span > </span>
+<a id="L495"></a><span class="visited"> </span>
+<a id="L496"></a><span > </span>
+<a id="L497"></a><span > </span>
+<a id="L498"></a><span > </span>
+<a id="L499"></a><span > </span>
+</pre>
+      </div>
+      <div id="text-layer">
+        <pre id="line-numbers">
+<a href="#L1">  1</a>
+<a href="#L2">  2</a>
+<a href="#L3">  3</a>
+<a href="#L4">  4</a>
+<a href="#L5">  5</a>
+<a href="#L6">  6</a>
+<a href="#L7">  7</a>
+<a href="#L8">  8</a>
+<a href="#L9">  9</a>
+<a href="#L10"> 10</a>
+<a href="#L11"> 11</a>
+<a href="#L12"> 12</a>
+<a href="#L13"> 13</a>
+<a href="#L14"> 14</a>
+<a href="#L15"> 15</a>
+<a href="#L16"> 16</a>
+<a href="#L17"> 17</a>
+<a href="#L18"> 18</a>
+<a href="#L19"> 19</a>
+<a href="#L20"> 20</a>
+<a href="#L21"> 21</a>
+<a href="#L22"> 22</a>
+<a href="#L23"> 23</a>
+<a href="#L24"> 24</a>
+<a href="#L25"> 25</a>
+<a href="#L26"> 26</a>
+<a href="#L27"> 27</a>
+<a href="#L28"> 28</a>
+<a href="#L29"> 29</a>
+<a href="#L30"> 30</a>
+<a href="#L31"> 31</a>
+<a href="#L32"> 32</a>
+<a href="#L33"> 33</a>
+<a href="#L34"> 34</a>
+<a href="#L35"> 35</a>
+<a href="#L36"> 36</a>
+<a href="#L37"> 37</a>
+<a href="#L38"> 38</a>
+<a href="#L39"> 39</a>
+<a href="#L40"> 40</a>
+<a href="#L41"> 41</a>
+<a href="#L42"> 42</a>
+<a href="#L43"> 43</a>
+<a href="#L44"> 44</a>
+<a href="#L45"> 45</a>
+<a href="#L46"> 46</a>
+<a href="#L47"> 47</a>
+<a href="#L48"> 48</a>
+<a href="#L49"> 49</a>
+<a href="#L50"> 50</a>
+<a href="#L51"> 51</a>
+<a href="#L52"> 52</a>
+<a href="#L53"> 53</a>
+<a href="#L54"> 54</a>
+<a href="#L55"> 55</a>
+<a href="#L56"> 56</a>
+<a href="#L57"> 57</a>
+<a href="#L58"> 58</a>
+<a href="#L59"> 59</a>
+<a href="#L60"> 60</a>
+<a href="#L61"> 61</a>
+<a href="#L62"> 62</a>
+<a href="#L63"> 63</a>
+<a href="#L64"> 64</a>
+<a href="#L65"> 65</a>
+<a href="#L66"> 66</a>
+<a href="#L67"> 67</a>
+<a href="#L68"> 68</a>
+<a href="#L69"> 69</a>
+<a href="#L70"> 70</a>
+<a href="#L71"> 71</a>
+<a href="#L72"> 72</a>
+<a href="#L73"> 73</a>
+<a href="#L74"> 74</a>
+<a href="#L75"> 75</a>
+<a href="#L76"> 76</a>
+<a href="#L77"> 77</a>
+<a href="#L78"> 78</a>
+<a href="#L79"> 79</a>
+<a href="#L80"> 80</a>
+<a href="#L81"> 81</a>
+<a href="#L82"> 82</a>
+<a href="#L83"> 83</a>
+<a href="#L84"> 84</a>
+<a href="#L85"> 85</a>
+<a href="#L86"> 86</a>
+<a href="#L87"> 87</a>
+<a href="#L88"> 88</a>
+<a href="#L89"> 89</a>
+<a href="#L90"> 90</a>
+<a href="#L91"> 91</a>
+<a href="#L92"> 92</a>
+<a href="#L93"> 93</a>
+<a href="#L94"> 94</a>
+<a href="#L95"> 95</a>
+<a href="#L96"> 96</a>
+<a href="#L97"> 97</a>
+<a href="#L98"> 98</a>
+<a href="#L99"> 99</a>
+<a href="#L100">100</a>
+<a href="#L101">101</a>
+<a href="#L102">102</a>
+<a href="#L103">103</a>
+<a href="#L104">104</a>
+<a href="#L105">105</a>
+<a href="#L106">106</a>
+<a href="#L107">107</a>
+<a href="#L108">108</a>
+<a href="#L109">109</a>
+<a href="#L110">110</a>
+<a href="#L111">111</a>
+<a href="#L112">112</a>
+<a href="#L113">113</a>
+<a href="#L114">114</a>
+<a href="#L115">115</a>
+<a href="#L116">116</a>
+<a href="#L117">117</a>
+<a href="#L118">118</a>
+<a href="#L119">119</a>
+<a href="#L120">120</a>
+<a href="#L121">121</a>
+<a href="#L122">122</a>
+<a href="#L123">123</a>
+<a href="#L124">124</a>
+<a href="#L125">125</a>
+<a href="#L126">126</a>
+<a href="#L127">127</a>
+<a href="#L128">128</a>
+<a href="#L129">129</a>
+<a href="#L130">130</a>
+<a href="#L131">131</a>
+<a href="#L132">132</a>
+<a href="#L133">133</a>
+<a href="#L134">134</a>
+<a href="#L135">135</a>
+<a href="#L136">136</a>
+<a href="#L137">137</a>
+<a href="#L138">138</a>
+<a href="#L139">139</a>
+<a href="#L140">140</a>
+<a href="#L141">141</a>
+<a href="#L142">142</a>
+<a href="#L143">143</a>
+<a href="#L144">144</a>
+<a href="#L145">145</a>
+<a href="#L146">146</a>
+<a href="#L147">147</a>
+<a href="#L148">148</a>
+<a href="#L149">149</a>
+<a href="#L150">150</a>
+<a href="#L151">151</a>
+<a href="#L152">152</a>
+<a href="#L153">153</a>
+<a href="#L154">154</a>
+<a href="#L155">155</a>
+<a href="#L156">156</a>
+<a href="#L157">157</a>
+<a href="#L158">158</a>
+<a href="#L159">159</a>
+<a href="#L160">160</a>
+<a href="#L161">161</a>
+<a href="#L162">162</a>
+<a href="#L163">163</a>
+<a href="#L164">164</a>
+<a href="#L165">165</a>
+<a href="#L166">166</a>
+<a href="#L167">167</a>
+<a href="#L168">168</a>
+<a href="#L169">169</a>
+<a href="#L170">170</a>
+<a href="#L171">171</a>
+<a href="#L172">172</a>
+<a href="#L173">173</a>
+<a href="#L174">174</a>
+<a href="#L175">175</a>
+<a href="#L176">176</a>
+<a href="#L177">177</a>
+<a href="#L178">178</a>
+<a href="#L179">179</a>
+<a href="#L180">180</a>
+<a href="#L181">181</a>
+<a href="#L182">182</a>
+<a href="#L183">183</a>
+<a href="#L184">184</a>
+<a href="#L185">185</a>
+<a href="#L186">186</a>
+<a href="#L187">187</a>
+<a href="#L188">188</a>
+<a href="#L189">189</a>
+<a href="#L190">190</a>
+<a href="#L191">191</a>
+<a href="#L192">192</a>
+<a href="#L193">193</a>
+<a href="#L194">194</a>
+<a href="#L195">195</a>
+<a href="#L196">196</a>
+<a href="#L197">197</a>
+<a href="#L198">198</a>
+<a href="#L199">199</a>
+<a href="#L200">200</a>
+<a href="#L201">201</a>
+<a href="#L202">202</a>
+<a href="#L203">203</a>
+<a href="#L204">204</a>
+<a href="#L205">205</a>
+<a href="#L206">206</a>
+<a href="#L207">207</a>
+<a href="#L208">208</a>
+<a href="#L209">209</a>
+<a href="#L210">210</a>
+<a href="#L211">211</a>
+<a href="#L212">212</a>
+<a href="#L213">213</a>
+<a href="#L214">214</a>
+<a href="#L215">215</a>
+<a href="#L216">216</a>
+<a href="#L217">217</a>
+<a href="#L218">218</a>
+<a href="#L219">219</a>
+<a href="#L220">220</a>
+<a href="#L221">221</a>
+<a href="#L222">222</a>
+<a href="#L223">223</a>
+<a href="#L224">224</a>
+<a href="#L225">225</a>
+<a href="#L226">226</a>
+<a href="#L227">227</a>
+<a href="#L228">228</a>
+<a href="#L229">229</a>
+<a href="#L230">230</a>
+<a href="#L231">231</a>
+<a href="#L232">232</a>
+<a href="#L233">233</a>
+<a href="#L234">234</a>
+<a href="#L235">235</a>
+<a href="#L236">236</a>
+<a href="#L237">237</a>
+<a href="#L238">238</a>
+<a href="#L239">239</a>
+<a href="#L240">240</a>
+<a href="#L241">241</a>
+<a href="#L242">242</a>
+<a href="#L243">243</a>
+<a href="#L244">244</a>
+<a href="#L245">245</a>
+<a href="#L246">246</a>
+<a href="#L247">247</a>
+<a href="#L248">248</a>
+<a href="#L249">249</a>
+<a href="#L250">250</a>
+<a href="#L251">251</a>
+<a href="#L252">252</a>
+<a href="#L253">253</a>
+<a href="#L254">254</a>
+<a href="#L255">255</a>
+<a href="#L256">256</a>
+<a href="#L257">257</a>
+<a href="#L258">258</a>
+<a href="#L259">259</a>
+<a href="#L260">260</a>
+<a href="#L261">261</a>
+<a href="#L262">262</a>
+<a href="#L263">263</a>
+<a href="#L264">264</a>
+<a href="#L265">265</a>
+<a href="#L266">266</a>
+<a href="#L267">267</a>
+<a href="#L268">268</a>
+<a href="#L269">269</a>
+<a href="#L270">270</a>
+<a href="#L271">271</a>
+<a href="#L272">272</a>
+<a href="#L273">273</a>
+<a href="#L274">274</a>
+<a href="#L275">275</a>
+<a href="#L276">276</a>
+<a href="#L277">277</a>
+<a href="#L278">278</a>
+<a href="#L279">279</a>
+<a href="#L280">280</a>
+<a href="#L281">281</a>
+<a href="#L282">282</a>
+<a href="#L283">283</a>
+<a href="#L284">284</a>
+<a href="#L285">285</a>
+<a href="#L286">286</a>
+<a href="#L287">287</a>
+<a href="#L288">288</a>
+<a href="#L289">289</a>
+<a href="#L290">290</a>
+<a href="#L291">291</a>
+<a href="#L292">292</a>
+<a href="#L293">293</a>
+<a href="#L294">294</a>
+<a href="#L295">295</a>
+<a href="#L296">296</a>
+<a href="#L297">297</a>
+<a href="#L298">298</a>
+<a href="#L299">299</a>
+<a href="#L300">300</a>
+<a href="#L301">301</a>
+<a href="#L302">302</a>
+<a href="#L303">303</a>
+<a href="#L304">304</a>
+<a href="#L305">305</a>
+<a href="#L306">306</a>
+<a href="#L307">307</a>
+<a href="#L308">308</a>
+<a href="#L309">309</a>
+<a href="#L310">310</a>
+<a href="#L311">311</a>
+<a href="#L312">312</a>
+<a href="#L313">313</a>
+<a href="#L314">314</a>
+<a href="#L315">315</a>
+<a href="#L316">316</a>
+<a href="#L317">317</a>
+<a href="#L318">318</a>
+<a href="#L319">319</a>
+<a href="#L320">320</a>
+<a href="#L321">321</a>
+<a href="#L322">322</a>
+<a href="#L323">323</a>
+<a href="#L324">324</a>
+<a href="#L325">325</a>
+<a href="#L326">326</a>
+<a href="#L327">327</a>
+<a href="#L328">328</a>
+<a href="#L329">329</a>
+<a href="#L330">330</a>
+<a href="#L331">331</a>
+<a href="#L332">332</a>
+<a href="#L333">333</a>
+<a href="#L334">334</a>
+<a href="#L335">335</a>
+<a href="#L336">336</a>
+<a href="#L337">337</a>
+<a href="#L338">338</a>
+<a href="#L339">339</a>
+<a href="#L340">340</a>
+<a href="#L341">341</a>
+<a href="#L342">342</a>
+<a href="#L343">343</a>
+<a href="#L344">344</a>
+<a href="#L345">345</a>
+<a href="#L346">346</a>
+<a href="#L347">347</a>
+<a href="#L348">348</a>
+<a href="#L349">349</a>
+<a href="#L350">350</a>
+<a href="#L351">351</a>
+<a href="#L352">352</a>
+<a href="#L353">353</a>
+<a href="#L354">354</a>
+<a href="#L355">355</a>
+<a href="#L356">356</a>
+<a href="#L357">357</a>
+<a href="#L358">358</a>
+<a href="#L359">359</a>
+<a href="#L360">360</a>
+<a href="#L361">361</a>
+<a href="#L362">362</a>
+<a href="#L363">363</a>
+<a href="#L364">364</a>
+<a href="#L365">365</a>
+<a href="#L366">366</a>
+<a href="#L367">367</a>
+<a href="#L368">368</a>
+<a href="#L369">369</a>
+<a href="#L370">370</a>
+<a href="#L371">371</a>
+<a href="#L372">372</a>
+<a href="#L373">373</a>
+<a href="#L374">374</a>
+<a href="#L375">375</a>
+<a href="#L376">376</a>
+<a href="#L377">377</a>
+<a href="#L378">378</a>
+<a href="#L379">379</a>
+<a href="#L380">380</a>
+<a href="#L381">381</a>
+<a href="#L382">382</a>
+<a href="#L383">383</a>
+<a href="#L384">384</a>
+<a href="#L385">385</a>
+<a href="#L386">386</a>
+<a href="#L387">387</a>
+<a href="#L388">388</a>
+<a href="#L389">389</a>
+<a href="#L390">390</a>
+<a href="#L391">391</a>
+<a href="#L392">392</a>
+<a href="#L393">393</a>
+<a href="#L394">394</a>
+<a href="#L395">395</a>
+<a href="#L396">396</a>
+<a href="#L397">397</a>
+<a href="#L398">398</a>
+<a href="#L399">399</a>
+<a href="#L400">400</a>
+<a href="#L401">401</a>
+<a href="#L402">402</a>
+<a href="#L403">403</a>
+<a href="#L404">404</a>
+<a href="#L405">405</a>
+<a href="#L406">406</a>
+<a href="#L407">407</a>
+<a href="#L408">408</a>
+<a href="#L409">409</a>
+<a href="#L410">410</a>
+<a href="#L411">411</a>
+<a href="#L412">412</a>
+<a href="#L413">413</a>
+<a href="#L414">414</a>
+<a href="#L415">415</a>
+<a href="#L416">416</a>
+<a href="#L417">417</a>
+<a href="#L418">418</a>
+<a href="#L419">419</a>
+<a href="#L420">420</a>
+<a href="#L421">421</a>
+<a href="#L422">422</a>
+<a href="#L423">423</a>
+<a href="#L424">424</a>
+<a href="#L425">425</a>
+<a href="#L426">426</a>
+<a href="#L427">427</a>
+<a href="#L428">428</a>
+<a href="#L429">429</a>
+<a href="#L430">430</a>
+<a href="#L431">431</a>
+<a href="#L432">432</a>
+<a href="#L433">433</a>
+<a href="#L434">434</a>
+<a href="#L435">435</a>
+<a href="#L436">436</a>
+<a href="#L437">437</a>
+<a href="#L438">438</a>
+<a href="#L439">439</a>
+<a href="#L440">440</a>
+<a href="#L441">441</a>
+<a href="#L442">442</a>
+<a href="#L443">443</a>
+<a href="#L444">444</a>
+<a href="#L445">445</a>
+<a href="#L446">446</a>
+<a href="#L447">447</a>
+<a href="#L448">448</a>
+<a href="#L449">449</a>
+<a href="#L450">450</a>
+<a href="#L451">451</a>
+<a href="#L452">452</a>
+<a href="#L453">453</a>
+<a href="#L454">454</a>
+<a href="#L455">455</a>
+<a href="#L456">456</a>
+<a href="#L457">457</a>
+<a href="#L458">458</a>
+<a href="#L459">459</a>
+<a href="#L460">460</a>
+<a href="#L461">461</a>
+<a href="#L462">462</a>
+<a href="#L463">463</a>
+<a href="#L464">464</a>
+<a href="#L465">465</a>
+<a href="#L466">466</a>
+<a href="#L467">467</a>
+<a href="#L468">468</a>
+<a href="#L469">469</a>
+<a href="#L470">470</a>
+<a href="#L471">471</a>
+<a href="#L472">472</a>
+<a href="#L473">473</a>
+<a href="#L474">474</a>
+<a href="#L475">475</a>
+<a href="#L476">476</a>
+<a href="#L477">477</a>
+<a href="#L478">478</a>
+<a href="#L479">479</a>
+<a href="#L480">480</a>
+<a href="#L481">481</a>
+<a href="#L482">482</a>
+<a href="#L483">483</a>
+<a href="#L484">484</a>
+<a href="#L485">485</a>
+<a href="#L486">486</a>
+<a href="#L487">487</a>
+<a href="#L488">488</a>
+<a href="#L489">489</a>
+<a href="#L490">490</a>
+<a href="#L491">491</a>
+<a href="#L492">492</a>
+<a href="#L493">493</a>
+<a href="#L494">494</a>
+<a href="#L495">495</a>
+<a href="#L496">496</a>
+<a href="#L497">497</a>
+<a href="#L498">498</a>
+<a href="#L499">499</a>
+</pre>
+        <pre id="code">
+(**************************************************************************)
+(*                                                                        *)
+(*                                 OCaml                                  *)
+(*                                                                        *)
+(*                         Alain Frisch, LexiFi                           *)
+(*                                                                        *)
+(*   Copyright 2012 Institut National de Recherche en Informatique et     *)
+(*     en Automatique.                                                    *)
+(*                                                                        *)
+(*   All rights reserved.  This file is distributed under the terms of    *)
+(*   the GNU Lesser General Public License version 2.1, with the          *)
+(*   special exception on linking described in the file LICENSE.          *)
+(*                                                                        *)
+(**************************************************************************)
+
+(** Helpers to produce Parsetree fragments *)
+
+open Asttypes
+open Parsetree
+open Docstrings
+
+type lid = Longident.t loc
+type str = string loc
+type loc = Location.t
+type attrs = attribute list
+
+let default_loc = <span data-count="1">r</span>ef Location.none
+
+let with_default_loc l f =
+  <span data-count="0">l</span>et old = <span data-count="0">!</span>default_loc in
+  <span data-count="0">d</span>efault_loc := l;
+  <span data-count="0">t</span>ry let r = <span data-count="0">f</span> () in <span data-count="0">d</span>efault_loc := old; <span data-count="0">r</span>
+  with <span data-count="0">e</span>xn -&gt; default_loc := old; <span data-count="0">r</span>aise exn
+
+module Const = struct
+  let integer ?suffix i = <span data-count="0">P</span>const_integer (i, suffix)
+  let int ?suffix i = <span data-count="0">i</span>nteger ?suffix (string_of_int i)
+  let int32 ?(suffix=<span data-count="0">'</span>l') i = <span data-count="0">i</span>nteger ~suffix (Int32.to_string i)
+  let int64 ?(suffix=<span data-count="0">'</span>L') i = <span data-count="0">i</span>nteger ~suffix (Int64.to_string i)
+  let nativeint ?(suffix=<span data-count="0">'</span>n') i = <span data-count="0">i</span>nteger ~suffix (Nativeint.to_string i)
+  let float ?suffix f = <span data-count="0">P</span>const_float (f, suffix)
+  let char c = <span data-count="0">P</span>const_char c
+  let string ?quotation_delimiter s = <span data-count="0">P</span>const_string (s, quotation_delimiter)
+end
+
+module Typ = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="51802">[</span>]) d =
+    <span data-count="104540">{</span>ptyp_desc = d; ptyp_loc = loc; ptyp_attributes = attrs}
+  let attr d a = <span data-count="12517">{</span>d with ptyp_attributes = d.ptyp_attributes @ [a]}
+
+  let any ?loc ?attrs () = <span data-count="746">m</span>k ?loc ?attrs Ptyp_any
+  let var ?loc ?attrs a = <span data-count="6194">m</span>k ?loc ?attrs (Ptyp_var a)
+  let arrow ?loc ?attrs a b c = <span data-count="16100">m</span>k ?loc ?attrs (Ptyp_arrow (a, b, c))
+  let tuple ?loc ?attrs a = <span data-count="452">m</span>k ?loc ?attrs (Ptyp_tuple a)
+  let constr ?loc ?attrs a b = <span data-count="27272">m</span>k ?loc ?attrs (Ptyp_constr (a, b))
+  let object_ ?loc ?attrs a b = <span data-count="454">m</span>k ?loc ?attrs (Ptyp_object (a, b))
+  let class_ ?loc ?attrs a b = <span data-count="120">m</span>k ?loc ?attrs (Ptyp_class (a, b))
+  let alias ?loc ?attrs a b = <span data-count="214">m</span>k ?loc ?attrs (Ptyp_alias (a, b))
+  let variant ?loc ?attrs a b c = <span data-count="376">m</span>k ?loc ?attrs (Ptyp_variant (a, b, c))
+  let poly ?loc ?attrs a b = <span data-count="632">m</span>k ?loc ?attrs (Ptyp_poly (a, b))
+  let package ?loc ?attrs a b = <span data-count="166">m</span>k ?loc ?attrs (Ptyp_package (a, b))
+  let extension ?loc ?attrs a = <span data-count="12">m</span>k ?loc ?attrs (Ptyp_extension a)
+
+  let force_poly t =
+    <span data-count="0">m</span>atch t.ptyp_desc with
+    | <span data-count="0">P</span>typ_poly _ -&gt; t
+    | <span data-count="0">_</span> -&gt; poly ~loc:t.ptyp_loc [] t (* -&gt; ghost? *)
+end
+
+module Pat = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="55716">[</span>]) d =
+    <span data-count="111250">{</span>ppat_desc = d; ppat_loc = loc; ppat_attributes = attrs}
+  let attr d a = <span data-count="4">{</span>d with ppat_attributes = d.ppat_attributes @ [a]}
+
+  let any ?loc ?attrs () = <span data-count="4824">m</span>k ?loc ?attrs Ppat_any
+  let var ?loc ?attrs a = <span data-count="31022">m</span>k ?loc ?attrs (Ppat_var a)
+  let alias ?loc ?attrs a b = <span data-count="308">m</span>k ?loc ?attrs (Ppat_alias (a, b))
+  let constant ?loc ?attrs a = <span data-count="1664">m</span>k ?loc ?attrs (Ppat_constant a)
+  let interval ?loc ?attrs a b = <span data-count="8">m</span>k ?loc ?attrs (Ppat_interval (a, b))
+  let tuple ?loc ?attrs a = <span data-count="4522">m</span>k ?loc ?attrs (Ppat_tuple a)
+  let construct ?loc ?attrs a b = <span data-count="10532">m</span>k ?loc ?attrs (Ppat_construct (a, b))
+  let variant ?loc ?attrs a b = <span data-count="584">m</span>k ?loc ?attrs (Ppat_variant (a, b))
+  let record ?loc ?attrs a b = <span data-count="126">m</span>k ?loc ?attrs (Ppat_record (a, b))
+  let array ?loc ?attrs a = <span data-count="28">m</span>k ?loc ?attrs (Ppat_array a)
+  let or_ ?loc ?attrs a b = <span data-count="444">m</span>k ?loc ?attrs (Ppat_or (a, b))
+  let constraint_ ?loc ?attrs a b = <span data-count="1254">m</span>k ?loc ?attrs (Ppat_constraint (a, b))
+  let type_ ?loc ?attrs a = <span data-count="102">m</span>k ?loc ?attrs (Ppat_type a)
+  let lazy_ ?loc ?attrs a = <span data-count="12">m</span>k ?loc ?attrs (Ppat_lazy a)
+  let unpack ?loc ?attrs a = <span data-count="50">m</span>k ?loc ?attrs (Ppat_unpack a)
+  let open_ ?loc ?attrs a b = <span data-count="0">m</span>k ?loc ?attrs (Ppat_open (a, b))
+  let exception_ ?loc ?attrs a = <span data-count="40">m</span>k ?loc ?attrs (Ppat_exception a)
+  let extension ?loc ?attrs a = <span data-count="14">m</span>k ?loc ?attrs (Ppat_extension a)
+end
+
+module Exp = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="347965">[</span>]) d =
+    <span data-count="688910">{</span>pexp_desc = d; pexp_loc = loc; pexp_attributes = attrs}
+  let attr d a = <span data-count="131">{</span>d with pexp_attributes = d.pexp_attributes @ [a]}
+
+  let ident ?loc ?attrs a = <span data-count="114648">m</span>k ?loc ?attrs (Pexp_ident a)
+  let constant ?loc ?attrs a = <span data-count="62000">m</span>k ?loc ?attrs (Pexp_constant a)
+  let let_ ?loc ?attrs a b c = <span data-count="6354">m</span>k ?loc ?attrs (Pexp_let (a, b, c))
+  let fun_ ?loc ?attrs a b c d = <span data-count="10044">m</span>k ?loc ?attrs (Pexp_fun (a, b, c, d))
+  let function_ ?loc ?attrs a = <span data-count="808">m</span>k ?loc ?attrs (Pexp_function a)
+  let apply ?loc ?attrs a b = <span data-count="58860">m</span>k ?loc ?attrs (Pexp_apply (a, b))
+  let match_ ?loc ?attrs a b = <span data-count="1056">m</span>k ?loc ?attrs (Pexp_match (a, b))
+  let try_ ?loc ?attrs a b = <span data-count="336">m</span>k ?loc ?attrs (Pexp_try (a, b))
+  let tuple ?loc ?attrs a = <span data-count="17822">m</span>k ?loc ?attrs (Pexp_tuple a)
+  let construct ?loc ?attrs a b = <span data-count="42410">m</span>k ?loc ?attrs (Pexp_construct (a, b))
+  let variant ?loc ?attrs a b = <span data-count="396">m</span>k ?loc ?attrs (Pexp_variant (a, b))
+  let record ?loc ?attrs a b = <span data-count="3626">m</span>k ?loc ?attrs (Pexp_record (a, b))
+  let field ?loc ?attrs a b = <span data-count="758">m</span>k ?loc ?attrs (Pexp_field (a, b))
+  let setfield ?loc ?attrs a b c = <span data-count="68">m</span>k ?loc ?attrs (Pexp_setfield (a, b, c))
+  let array ?loc ?attrs a = <span data-count="1020">m</span>k ?loc ?attrs (Pexp_array a)
+  let ifthenelse ?loc ?attrs a b c = <span data-count="2426">m</span>k ?loc ?attrs (Pexp_ifthenelse (a, b, c))
+  let sequence ?loc ?attrs a b = <span data-count="11318">m</span>k ?loc ?attrs (Pexp_sequence (a, b))
+  let while_ ?loc ?attrs a b = <span data-count="292">m</span>k ?loc ?attrs (Pexp_while (a, b))
+  let for_ ?loc ?attrs a b c d e = <span data-count="674">m</span>k ?loc ?attrs (Pexp_for (a, b, c, d, e))
+  let constraint_ ?loc ?attrs a b = <span data-count="1707">m</span>k ?loc ?attrs (Pexp_constraint (a, b))
+  let coerce ?loc ?attrs a b c = <span data-count="128">m</span>k ?loc ?attrs (Pexp_coerce (a, b, c))
+  let send ?loc ?attrs a b = <span data-count="646">m</span>k ?loc ?attrs (Pexp_send (a, b))
+  let new_ ?loc ?attrs a = <span data-count="218">m</span>k ?loc ?attrs (Pexp_new a)
+  let setinstvar ?loc ?attrs a b = <span data-count="52">m</span>k ?loc ?attrs (Pexp_setinstvar (a, b))
+  let override ?loc ?attrs a = <span data-count="34">m</span>k ?loc ?attrs (Pexp_override a)
+  let letmodule ?loc ?attrs a b c= <span data-count="82">m</span>k ?loc ?attrs (Pexp_letmodule (a, b, c))
+  let letexception ?loc ?attrs a b = <span data-count="2">m</span>k ?loc ?attrs (Pexp_letexception (a, b))
+  let assert_ ?loc ?attrs a = <span data-count="1548">m</span>k ?loc ?attrs (Pexp_assert a)
+  let lazy_ ?loc ?attrs a = <span data-count="64">m</span>k ?loc ?attrs (Pexp_lazy a)
+  let poly ?loc ?attrs a b = <span data-count="640">m</span>k ?loc ?attrs (Pexp_poly (a, b))
+  let object_ ?loc ?attrs a = <span data-count="70">m</span>k ?loc ?attrs (Pexp_object a)
+  let newtype ?loc ?attrs a b = <span data-count="610">m</span>k ?loc ?attrs (Pexp_newtype (a, b))
+  let pack ?loc ?attrs a = <span data-count="70">m</span>k ?loc ?attrs (Pexp_pack a)
+  let open_ ?loc ?attrs a b c = <span data-count="78">m</span>k ?loc ?attrs (Pexp_open (a, b, c))
+  let extension ?loc ?attrs a = <span data-count="54">m</span>k ?loc ?attrs (Pexp_extension a)
+  let unreachable ?loc ?attrs () = <span data-count="52">m</span>k ?loc ?attrs Pexp_unreachable
+
+  let case lhs ?guard rhs =
+    <span data-count="7569">{</span>
+     pc_lhs = lhs;
+     pc_guard = guard;
+     pc_rhs = rhs;
+    }
+end
+
+module Mty = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="812">[</span>]) d =
+    <span data-count="3082">{</span>pmty_desc = d; pmty_loc = loc; pmty_attributes = attrs}
+  let attr d a = <span data-count="9">{</span>d with pmty_attributes = d.pmty_attributes @ [a]}
+
+  let ident ?loc ?attrs a = <span data-count="340">m</span>k ?loc ?attrs (Pmty_ident a)
+  let alias ?loc ?attrs a = <span data-count="56">m</span>k ?loc ?attrs (Pmty_alias a)
+  let signature ?loc ?attrs a = <span data-count="812">m</span>k ?loc ?attrs (Pmty_signature a)
+  let functor_ ?loc ?attrs a b c = <span data-count="40">m</span>k ?loc ?attrs (Pmty_functor (a, b, c))
+  let with_ ?loc ?attrs a b = <span data-count="138">m</span>k ?loc ?attrs (Pmty_with (a, b))
+  let typeof_ ?loc ?attrs a = <span data-count="46">m</span>k ?loc ?attrs (Pmty_typeof a)
+  let extension ?loc ?attrs a = <span data-count="2">m</span>k ?loc ?attrs (Pmty_extension a)
+end
+
+module Mod = struct
+let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="1830">[</span>]) d =
+  <span data-count="5921">{</span>pmod_desc = d; pmod_loc = loc; pmod_attributes = attrs}
+  let attr d a = <span data-count="19">{</span>d with pmod_attributes = d.pmod_attributes @ [a]}
+
+  let ident ?loc ?attrs x = <span data-count="866">m</span>k ?loc ?attrs (Pmod_ident x)
+  let structure ?loc ?attrs x = <span data-count="1104">m</span>k ?loc ?attrs (Pmod_structure x)
+  let functor_ ?loc ?attrs arg arg_ty body =
+    <span data-count="216">m</span>k ?loc ?attrs (Pmod_functor (arg, arg_ty, body))
+  let apply ?loc ?attrs m1 m2 = <span data-count="280">m</span>k ?loc ?attrs (Pmod_apply (m1, m2))
+  let constraint_ ?loc ?attrs m mty = <span data-count="456">m</span>k ?loc ?attrs (Pmod_constraint (m, mty))
+  let unpack ?loc ?attrs e = <span data-count="28">m</span>k ?loc ?attrs (Pmod_unpack e)
+  let extension ?loc ?attrs a = <span data-count="2">m</span>k ?loc ?attrs (Pmod_extension a)
+end
+
+module Sig = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) d = <span data-count="2636">{</span>psig_desc = d; psig_loc = loc}
+
+  let value ?loc a = <span data-count="482">m</span>k ?loc (Psig_value a)
+  let type_ ?loc rec_flag a = <span data-count="482">m</span>k ?loc (Psig_type (rec_flag, a))
+  let type_extension ?loc a = <span data-count="28">m</span>k ?loc (Psig_typext a)
+  let exception_ ?loc a = <span data-count="22">m</span>k ?loc (Psig_exception a)
+  let module_ ?loc a = <span data-count="152">m</span>k ?loc (Psig_module a)
+  let rec_module ?loc a = <span data-count="8">m</span>k ?loc (Psig_recmodule a)
+  let modtype ?loc a = <span data-count="28">m</span>k ?loc (Psig_modtype a)
+  let open_ ?loc a = <span data-count="2">m</span>k ?loc (Psig_open a)
+  let include_ ?loc a = <span data-count="54">m</span>k ?loc (Psig_include a)
+  let class_ ?loc a = <span data-count="26">m</span>k ?loc (Psig_class a)
+  let class_type ?loc a = <span data-count="2">m</span>k ?loc (Psig_class_type a)
+  let extension ?loc ?(attrs = <span data-count="0">[</span>]) a = <span data-count="26">m</span>k ?loc (Psig_extension (a, attrs))
+  let attribute ?loc a = <span data-count="2">m</span>k ?loc (Psig_attribute a)
+  let text txt =
+    <span data-count="2945">L</span>ist.map
+      (fun ds -&gt; <span data-count="0">a</span>ttribute ~loc:(docstring_loc ds) (text_attr ds))
+      txt
+end
+
+module Str = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) d = <span data-count="37056">{</span>pstr_desc = d; pstr_loc = loc}
+
+  let eval ?loc ?(attrs = <span data-count="0">[</span>]) a = <span data-count="3094">m</span>k ?loc (Pstr_eval (a, attrs))
+  let value ?loc a b = <span data-count="9070">m</span>k ?loc (Pstr_value (a, b))
+  let primitive ?loc a = <span data-count="2580">m</span>k ?loc (Pstr_primitive a)
+  let type_ ?loc rec_flag a = <span data-count="1666">m</span>k ?loc (Pstr_type (rec_flag, a))
+  let type_extension ?loc a = <span data-count="94">m</span>k ?loc (Pstr_typext a)
+  let exception_ ?loc a = <span data-count="94">m</span>k ?loc (Pstr_exception a)
+  let module_ ?loc a = <span data-count="1254">m</span>k ?loc (Pstr_module a)
+  let rec_module ?loc a = <span data-count="108">m</span>k ?loc (Pstr_recmodule a)
+  let modtype ?loc a = <span data-count="302">m</span>k ?loc (Pstr_modtype a)
+  let open_ ?loc a = <span data-count="600">m</span>k ?loc (Pstr_open a)
+  let class_ ?loc a = <span data-count="392">m</span>k ?loc (Pstr_class a)
+  let class_type ?loc a = <span data-count="68">m</span>k ?loc (Pstr_class_type a)
+  let include_ ?loc a = <span data-count="108">m</span>k ?loc (Pstr_include a)
+  let extension ?loc ?(attrs = <span data-count="0">[</span>]) a = <span data-count="268">m</span>k ?loc (Pstr_extension (a, attrs))
+  let attribute ?loc a = <span data-count="506">m</span>k ?loc (Pstr_attribute a)
+  let text txt =
+    <span data-count="29196">L</span>ist.map
+      (fun ds -&gt; <span data-count="164">a</span>ttribute ~loc:(docstring_loc ds) (text_attr ds))
+      txt
+end
+
+module Cl = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="526">[</span>]) d =
+    <span data-count="1888">{</span>
+     pcl_desc = d;
+     pcl_loc = loc;
+     pcl_attributes = attrs;
+    }
+  let attr d a = <span data-count="2">{</span>d with pcl_attributes = d.pcl_attributes @ [a]}
+
+  let constr ?loc ?attrs a b = <span data-count="120">m</span>k ?loc ?attrs (Pcl_constr (a, b))
+  let structure ?loc ?attrs a = <span data-count="418">m</span>k ?loc ?attrs (Pcl_structure a)
+  let fun_ ?loc ?attrs a b c d = <span data-count="292">m</span>k ?loc ?attrs (Pcl_fun (a, b, c, d))
+  let apply ?loc ?attrs a b = <span data-count="72">m</span>k ?loc ?attrs (Pcl_apply (a, b))
+  let let_ ?loc ?attrs a b c = <span data-count="22">m</span>k ?loc ?attrs (Pcl_let (a, b, c))
+  let constraint_ ?loc ?attrs a b = <span data-count="20">m</span>k ?loc ?attrs (Pcl_constraint (a, b))
+  let extension ?loc ?attrs a = <span data-count="0">m</span>k ?loc ?attrs (Pcl_extension a)
+end
+
+module Cty = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="63">[</span>]) d =
+    <span data-count="298">{</span>
+     pcty_desc = d;
+     pcty_loc = loc;
+     pcty_attributes = attrs;
+    }
+  let attr d a = <span data-count="1">{</span>d with pcty_attributes = d.pcty_attributes @ [a]}
+
+  let constr ?loc ?attrs a b = <span data-count="42">m</span>k ?loc ?attrs (Pcty_constr (a, b))
+  let signature ?loc ?attrs a = <span data-count="86">m</span>k ?loc ?attrs (Pcty_signature a)
+  let arrow ?loc ?attrs a b c = <span data-count="20">m</span>k ?loc ?attrs (Pcty_arrow (a, b, c))
+  let extension ?loc ?attrs a = <span data-count="0">m</span>k ?loc ?attrs (Pcty_extension a)
+end
+
+module Ctf = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
+           ?(docs = <span data-count="138">e</span>mpty_docs) d =
+    <span data-count="277">{</span>
+     pctf_desc = d;
+     pctf_loc = loc;
+     pctf_attributes = add_docs_attrs docs attrs;
+    }
+
+  let inherit_ ?loc ?attrs a = <span data-count="10">m</span>k ?loc ?attrs (Pctf_inherit a)
+  let val_ ?loc ?attrs a b c d = <span data-count="16">m</span>k ?loc ?attrs (Pctf_val (a, b, c, d))
+  let method_ ?loc ?attrs a b c d = <span data-count="106">m</span>k ?loc ?attrs (Pctf_method (a, b, c, d))
+  let constraint_ ?loc ?attrs a b = <span data-count="6">m</span>k ?loc ?attrs (Pctf_constraint (a, b))
+  let extension ?loc ?attrs a = <span data-count="0">m</span>k ?loc ?attrs (Pctf_extension a)
+  let attribute ?loc a = <span data-count="0">m</span>k ?loc (Pctf_attribute a)
+  let text txt =
+    <span data-count="313">L</span>ist.map
+      (fun ds -&gt; <span data-count="0">a</span>ttribute ~loc:(docstring_loc ds) (text_attr ds))
+      txt
+
+  let attr d a = <span data-count="0">{</span>d with pctf_attributes = d.pctf_attributes @ [a]}
+
+end
+
+module Cf = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
+        ?(docs = <span data-count="1092">e</span>mpty_docs) d =
+    <span data-count="2184">{</span>
+     pcf_desc = d;
+     pcf_loc = loc;
+     pcf_attributes = add_docs_attrs docs attrs;
+    }
+
+  let inherit_ ?loc ?attrs a b c = <span data-count="110">m</span>k ?loc ?attrs (Pcf_inherit (a, b, c))
+  let val_ ?loc ?attrs a b c = <span data-count="200">m</span>k ?loc ?attrs (Pcf_val (a, b, c))
+  let method_ ?loc ?attrs a b c = <span data-count="730">m</span>k ?loc ?attrs (Pcf_method (a, b, c))
+  let constraint_ ?loc ?attrs a b = <span data-count="44">m</span>k ?loc ?attrs (Pcf_constraint (a, b))
+  let initializer_ ?loc ?attrs a = <span data-count="8">m</span>k ?loc ?attrs (Pcf_initializer a)
+  let extension ?loc ?attrs a = <span data-count="0">m</span>k ?loc ?attrs (Pcf_extension a)
+  let attribute ?loc a = <span data-count="0">m</span>k ?loc (Pcf_attribute a)
+  let text txt =
+    <span data-count="2068">L</span>ist.map
+      (fun ds -&gt; <span data-count="0">a</span>ttribute ~loc:(docstring_loc ds) (text_attr ds))
+      txt
+
+  let virtual_ ct = <span data-count="0">C</span>fk_virtual ct
+  let concrete o e = <span data-count="0">C</span>fk_concrete (o, e)
+
+  let attr d a = <span data-count="0">{</span>d with pcf_attributes = d.pcf_attributes @ [a]}
+
+end
+
+module Val = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="3062">e</span>mpty_docs)
+        ?(prim = <span data-count="459">[</span>]) name typ =
+    <span data-count="6125">{</span>
+     pval_name = name;
+     pval_type = typ;
+     pval_attributes = add_docs_attrs docs attrs;
+     pval_loc = loc;
+     pval_prim = prim;
+    }
+end
+
+module Md = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
+        ?(docs = <span data-count="166">e</span>mpty_docs) ?(text = <span data-count="328">[</span>]) name typ =
+    <span data-count="334">{</span>
+     pmd_name = name;
+     pmd_type = typ;
+     pmd_attributes =
+       add_text_attrs text (add_docs_attrs docs attrs);
+     pmd_loc = loc;
+    }
+end
+
+module Mtd = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
+        ?(docs = <span data-count="330">e</span>mpty_docs) ?(text = <span data-count="664">[</span>]) ?typ name =
+    <span data-count="664">{</span>
+     pmtd_name = name;
+     pmtd_type = typ;
+     pmtd_attributes =
+       add_text_attrs text (add_docs_attrs docs attrs);
+     pmtd_loc = loc;
+    }
+end
+
+module Mb = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
+        ?(docs = <span data-count="1414">e</span>mpty_docs) ?(text = <span data-count="2788">[</span>]) name expr =
+    <span data-count="2840">{</span>
+     pmb_name = name;
+     pmb_expr = expr;
+     pmb_attributes =
+       add_text_attrs text (add_docs_attrs docs attrs);
+     pmb_loc = loc;
+    }
+end
+
+module Opn = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="602">e</span>mpty_docs)
+        ?(override = <span data-count="0">F</span>resh) lid =
+    <span data-count="1207">{</span>
+     popen_lid = lid;
+     popen_override = override;
+     popen_loc = loc;
+     popen_attributes = add_docs_attrs docs attrs;
+    }
+end
+
+module Incl = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="162">e</span>mpty_docs) mexpr =
+    <span data-count="325">{</span>
+     pincl_mod = mexpr;
+     pincl_loc = loc;
+     pincl_attributes = add_docs_attrs docs attrs;
+    }
+
+end
+
+module Vb = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="23573">e</span>mpty_docs)
+        ?(text = <span data-count="23573">[</span>]) pat expr =
+    <span data-count="32882">{</span>
+     pvb_pat = pat;
+     pvb_expr = expr;
+     pvb_attributes =
+       add_text_attrs text (add_docs_attrs docs attrs);
+     pvb_loc = loc;
+    }
+end
+
+module Ci = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
+        ?(docs = <span data-count="526">e</span>mpty_docs) ?(text = <span data-count="1016">[</span>])
+        ?(virt = <span data-count="0">C</span>oncrete) ?(params = <span data-count="0">[</span>]) name expr =
+    <span data-count="1054">{</span>
+     pci_virt = virt;
+     pci_params = params;
+     pci_name = name;
+     pci_expr = expr;
+     pci_attributes =
+       add_text_attrs text (add_docs_attrs docs attrs);
+     pci_loc = loc;
+    }
+end
+
+module Type = struct
+  let mk ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="243">[</span>])
+        ?(docs = <span data-count="2621">e</span>mpty_docs) ?(text = <span data-count="4792">[</span>])
+      ?(params = <span data-count="0">[</span>])
+      ?(cstrs = <span data-count="41">[</span>])
+      ?(kind = <span data-count="243">P</span>type_abstract)
+      ?(priv = <span data-count="41">P</span>ublic)
+      ?manifest
+      name =
+    <span data-count="4908">{</span>
+     ptype_name = name;
+     ptype_params = params;
+     ptype_cstrs = cstrs;
+     ptype_kind = kind;
+     ptype_private = priv;
+     ptype_manifest = manifest;
+     ptype_attributes =
+       add_text_attrs text (add_docs_attrs docs attrs);
+     ptype_loc = loc;
+    }
+
+  let constructor ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(info = <span data-count="2848">e</span>mpty_info)
+        ?(args = <span data-count="0">P</span>cstr_tuple []) ?res name =
+    <span data-count="5723">{</span>
+     pcd_name = name;
+     pcd_args = args;
+     pcd_res = res;
+     pcd_loc = loc;
+     pcd_attributes = add_info_attrs info attrs;
+    }
+
+  let field ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(info = <span data-count="592">e</span>mpty_info)
+        ?(mut = <span data-count="0">I</span>mmutable) name typ =
+    <span data-count="1184">{</span>
+     pld_name = name;
+     pld_mutable = mut;
+     pld_type = typ;
+     pld_loc = loc;
+     pld_attributes = add_info_attrs info attrs;
+    }
+
+end
+
+(** Type extensions *)
+module Te = struct
+  let mk ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="122">e</span>mpty_docs)
+        ?(params = <span data-count="0">[</span>]) ?(priv = <span data-count="0">P</span>ublic) path constructors =
+    <span data-count="249">{</span>
+     ptyext_path = path;
+     ptyext_params = params;
+     ptyext_constructors = constructors;
+     ptyext_private = priv;
+     ptyext_attributes = add_docs_attrs docs attrs;
+    }
+
+  let constructor ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
+        ?(docs = <span data-count="270">e</span>mpty_docs) ?(info = <span data-count="270">e</span>mpty_info) name kind =
+    <span data-count="270">{</span>
+     pext_name = name;
+     pext_kind = kind;
+     pext_loc = loc;
+     pext_attributes = add_docs_attrs docs (add_info_attrs info attrs);
+    }
+
+  let decl ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>]) ?(docs = <span data-count="139">e</span>mpty_docs)
+             ?(info = <span data-count="108">e</span>mpty_info) ?(args = <span data-count="0">P</span>cstr_tuple []) ?res name =
+    <span data-count="245">{</span>
+     pext_name = name;
+     pext_kind = Pext_decl(args, res);
+     pext_loc = loc;
+     pext_attributes = add_docs_attrs docs (add_info_attrs info attrs);
+    }
+
+  let rebind ?(loc = <span data-count="0">!</span>default_loc) ?(attrs = <span data-count="0">[</span>])
+        ?(docs = <span data-count="20">e</span>mpty_docs) ?(info = <span data-count="12">e</span>mpty_info) name lid =
+    <span data-count="32">{</span>
+     pext_name = name;
+     pext_kind = Pext_rebind lid;
+     pext_loc = loc;
+     pext_attributes = add_docs_attrs docs (add_info_attrs info attrs);
+    }
+
+end
+
+module Csig = struct
+  let mk self fields =
+    <span data-count="173">{</span>
+     pcsig_self = self;
+     pcsig_fields = fields;
+    }
+end
+
+module Cstr = struct
+  let mk self fields =
+    <span data-count="488">{</span>
+     pcstr_self = self;
+     pcstr_fields = fields;
+    }
+end
+</pre>
+      </div>
+    </div>
+    <div id="footer">Generated by on 2016-05-14 23:27:35 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <script src="coverage.js"></script>
+  </body>
+</html>
