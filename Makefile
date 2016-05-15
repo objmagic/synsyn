@@ -1,7 +1,9 @@
 all: build
 
 OCAMLBUILD_FLAGS = -use-ocamlfind -classic-display \
+									 -package bisect_ppx \
 									 -plugin-tag 'package(bisect_ppx.ocamlbuild)'
+
 OCAMLBUILD = ocamlbuild $(OCAMLBUILD_FLAGS)
 
 build: src/checkparse.ml

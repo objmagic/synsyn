@@ -1,13 +1,9 @@
-<src/lex/*.{ml,mli}>: bin_annot, annot
-<src/config/*.{ml,mli}>: bin_annot, annot
-<src/parsing/*.{ml,mli}>: bin_annot, annot
-<src/utils/*.{ml,mli}>: bin_annot, annot
 <src/lex>: include
 <src/config>: include
 <src/parsing>: include
 <src/utils>: include
-<src/lex/*>: coverage
-<src/config/*>: coverage
-<src/parsing/*>: coverage
-<src/utils/*>: coverage
+<src/lex/*.{ml,mli}>: bin_annot, annot, coverage
+<src/config/*.{ml,mli}>: bin_annot, annot, coverage
+<src/parsing/*.{ml,mli}>: bin_annot, annot, coverage
+<src/utils/*.{ml,mli}>: bin_annot, annot, coverage
 <*.{byte}>: coverage
