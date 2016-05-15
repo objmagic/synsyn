@@ -9,7 +9,12 @@ bisecting OCaml code under `/parsing` to help:
 
 ````Bash
 $ opam switch 4.03.0  
-$ eval `opam config env`
+$ eval `opam config env`  
+$ ./checkparse.byte tests  
 $ make BISECT_COVERAGE=YES  
 $ make report
 ````
+
+### License
+
+WTFPL

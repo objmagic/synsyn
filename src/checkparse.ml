@@ -1,3 +1,4 @@
+(* see PR#7200 *)
 let report_err exn =
   match exn with
     | Sys_error msg ->
@@ -99,17 +100,17 @@ let rec process path =
       Parse.implementation
       Pprintast.structure
       Printast.implementation
-      (fun mapper -> mapper.structure)
+      (fun mapper -> mapper.Ast_mapper.structure)
       path
   else if Filename.check_suffix path ".mli" then
     test
       Parse.interface
       Pprintast.signature
       Printast.interface
-      (fun mapper -> mapper.signature)
+      (fun mapper -> mapper.Ast_mapper.signature)
       path
 
 let () =
   for i = 1 to Array.length Sys.argv - 1 do
-    process Sys.argv.(i)
+    process (Array.get Sys.argv i)
   done
