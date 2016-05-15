@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="T02.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="T01" rel="Chapter" href="T01.html">
+<link title="T02" rel="Chapter" href="T02.html">
+<link title="T03" rel="Chapter" href="T03.html"><title>T03</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="T02.html" title="T02">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_T03.html">T03</a></h1>
+
+<pre><span class="keyword">module</span> T03: <code class="code">sig</code> <a href="T03.html">..</a> <code class="code">end</code></pre><hr width="100%">
+
+<pre><span class="keyword">module</span> <a href="T03.Foo.html">Foo</a>: <code class="code">sig</code> <a href="T03.Foo.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module type</span> <a href="T03.MT.html">MT</a> = <code class="type">module type of Foo</code></pre>
+<pre><span class="keyword">module</span> <a href="T03.Bar.html">Bar</a>: <code class="code">sig</code> <a href="T03.Bar.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module type</span> <a href="T03.MT2.html">MT2</a> = <code class="code">sig</code> <a href="T03.MT2.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module type</span> <a href="T03.Gee.html">Gee</a> = <code class="type"><a href="T03.MT2.html">MT2</a></code><code class="type">  with type t = float</code></pre>
+<pre><span class="keyword">module</span> <a href="T03.T.html">T</a>: <code class="type">(val ...</code></pre></body></html>
