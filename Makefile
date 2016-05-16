@@ -9,7 +9,8 @@ OCAMLBUILD = ocamlbuild $(OCAMLBUILD_FLAGS)
 build: src/checkparse.ml
 	$(OCAMLBUILD) src/checkparse.byte
 
-report:
+report: build clean-report
+	./checkparse.byte st.ml
 	bisect-ppx-report -I _build/ -I src/ -html coverage/ bisect*.out
 
 clean-report:
