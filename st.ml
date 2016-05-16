@@ -270,6 +270,8 @@ object(self)
         Class Bar -> (self :> bar_t)
       | other -> super#cast other
   method bar = "bar"
+  [@@@id]
+  [%%id]
 end
 ;;
 
@@ -7180,7 +7182,8 @@ let f : 'a 'b 'c. < .. > = assert false
 let () =
   let module M = (functor (T : sig end) -> struct end)(struct end) in ()
 
-class c = object inherit ((fun () -> object end) ()) end
+class c = object inherit ((fun () -> object end [@wee]: object end) ()) end
+
 
 let f = function x[@wee] -> ()
 let f = function
@@ -7568,3 +7571,6 @@ and b = let _ = new a in object end;;
 
 class a = let _ = new a in object end;;
 
+type hlist =
+  | [] : hlist
+  | ( :: ) : 'a * hlist -> hlist
