@@ -7571,6 +7571,8 @@ and b = let _ = new a in object end;;
 
 class a = let _ = new a in object end;;
 
+class type t = [%ext];;
+
 type hlist =
   | [] : hlist
   | ( :: ) : 'a * hlist -> hlist
