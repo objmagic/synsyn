@@ -11,7 +11,7 @@
           <span class="dirname">src/parsing/</span>pprintast.ml
         </a>
       </h1>
-      <h2>91.89%</h2>
+      <h2>92.01%</h2>
     </div>
     <div id="navbar">
       <span class="some-visited" style="top:4.74%"></span>
@@ -38,7 +38,6 @@
       <span class="unvisited" style="top:53.66%"></span>
       <span class="unvisited" style="top:54.56%"></span>
       <span class="unvisited" style="top:57.98%"></span>
-      <span class="unvisited" style="top:61.67%"></span>
       <span class="unvisited" style="top:62.37%"></span>
       <span class="unvisited" style="top:64.60%"></span>
       <span class="unvisited" style="top:66.83%"></span>
@@ -963,7 +962,7 @@
 <a id="L882"></a><span > </span>
 <a id="L883"></a><span > </span>
 <a id="L884"></a><span > </span>
-<a id="L885"></a><span class="unvisited"> </span>
+<a id="L885"></a><span class="visited"> </span>
 <a id="L886"></a><span > </span>
 <a id="L887"></a><span > </span>
 <a id="L888"></a><span class="visited"> </span>
@@ -3099,28 +3098,28 @@ let list : 'a . ?sep:space_formatter -&gt; ?first:space_formatter -&gt;
   ?last:space_formatter -&gt; (Format.formatter -&gt; 'a -&gt; unit) -&gt;
   Format.formatter -&gt; 'a list -&gt; unit
   = <span data-count="1">f</span>un ?sep ?first ?last fu f xs -&gt;
-    <span data-count="5726">l</span>et first = <span data-count="5726">m</span>atch first with <span data-count="851">S</span>ome x -&gt; x |<span data-count="4875">N</span>one -&gt; ("": _ format6)
-    and last = <span data-count="5726">m</span>atch last with <span data-count="851">S</span>ome x -&gt; x |<span data-count="4875">N</span>one -&gt; ("": _ format6)
-    and sep = <span data-count="5726">m</span>atch sep with <span data-count="4109">S</span>ome x -&gt; x |<span data-count="1617">N</span>one -&gt; ("@ ": _ format6) in
-    <span data-count="5726">l</span>et aux f = <span data-count="5726">f</span>unction
-      | <span data-count="359">[</span>] -&gt; ()
+    <span data-count="5728">l</span>et first = <span data-count="5728">m</span>atch first with <span data-count="851">S</span>ome x -&gt; x |<span data-count="4877">N</span>one -&gt; ("": _ format6)
+    and last = <span data-count="5728">m</span>atch last with <span data-count="851">S</span>ome x -&gt; x |<span data-count="4877">N</span>one -&gt; ("": _ format6)
+    and sep = <span data-count="5728">m</span>atch sep with <span data-count="4110">S</span>ome x -&gt; x |<span data-count="1618">N</span>one -&gt; ("@ ": _ format6) in
+    <span data-count="5728">l</span>et aux f = <span data-count="5728">f</span>unction
+      | <span data-count="361">[</span>] -&gt; ()
       | <span data-count="2287">[</span>x] -&gt; fu f x
       | <span data-count="3080">x</span>s -&gt;
-          let rec loop  f = <span data-count="9111">f</span>unction
+          let rec loop  f = <span data-count="9112">f</span>unction
             | <span data-count="3080">[</span>x] -&gt; fu f x
-            | <span data-count="6031">x</span>::xs -&gt;  fu f x; <span data-count="6031">p</span>p f sep; <span data-count="6031">l</span>oop f xs;
+            | <span data-count="6032">x</span>::xs -&gt;  fu f x; <span data-count="6032">p</span>p f sep; <span data-count="6032">l</span>oop f xs;
             | <span data-count="0">_</span> -&gt; assert false in <span data-count="3080">b</span>egin
             pp f first; <span data-count="3080">l</span>oop f xs; <span data-count="3080">p</span>p f last;
           end in
-    <span data-count="5726">a</span>ux f xs
+    <span data-count="5728">a</span>ux f xs
 
 let option : 'a. ?first:space_formatter -&gt; ?last:space_formatter -&gt;
   (Format.formatter -&gt; 'a -&gt; unit) -&gt; Format.formatter -&gt; 'a option -&gt; unit
   = <span data-count="1">f</span>un  ?first  ?last fu f a -&gt;
-    <span data-count="904">l</span>et first = <span data-count="904">m</span>atch first with <span data-count="807">S</span>ome x -&gt; x | <span data-count="97">N</span>one -&gt; ("": _ format6)
-    and last = <span data-count="904">m</span>atch last with <span data-count="68">S</span>ome x -&gt; x | <span data-count="836">N</span>one -&gt; ("": _ format6) in
-    <span data-count="904">m</span>atch a with
-    | <span data-count="880">N</span>one -&gt; ()
+    <span data-count="905">l</span>et first = <span data-count="905">m</span>atch first with <span data-count="807">S</span>ome x -&gt; x | <span data-count="98">N</span>one -&gt; ("": _ format6)
+    and last = <span data-count="905">m</span>atch last with <span data-count="68">S</span>ome x -&gt; x | <span data-count="837">N</span>one -&gt; ("": _ format6) in
+    <span data-count="905">m</span>atch a with
+    | <span data-count="881">N</span>one -&gt; ()
     | <span data-count="24">S</span>ome x -&gt; pp f first; <span data-count="24">f</span>u f x; <span data-count="24">p</span>p f last
 
 let paren: 'a . ?first:space_formatter -&gt; ?last:space_formatter -&gt;
@@ -3152,8 +3151,8 @@ let constant f = <span data-count="649">f</span>unction
 let mutable_flag f = <span data-count="143">f</span>unction
   | <span data-count="135">I</span>mmutable -&gt; ()
   | <span data-count="8">M</span>utable -&gt; pp f "mutable@;"
-let virtual_flag f  = <span data-count="132">f</span>unction
-  | <span data-count="121">C</span>oncrete -&gt; ()
+let virtual_flag f  = <span data-count="133">f</span>unction
+  | <span data-count="122">C</span>oncrete -&gt; ()
   | <span data-count="11">V</span>irtual -&gt; pp f "virtual@;"
 
 (* trailing space added *)
@@ -3177,8 +3176,8 @@ let tyvar f str = <span data-count="1972">p</span>p f "'%s" str
 let string_quot f x = <span data-count="143">p</span>p f "`%s" x
 
 (* c ['a,'b] *)
-let rec class_params_def ctxt f =  <span data-count="90">f</span>unction
-  | <span data-count="59">[</span>] -&gt; ()
+let rec class_params_def ctxt f =  <span data-count="91">f</span>unction
+  | <span data-count="60">[</span>] -&gt; ()
   | <span data-count="31">l</span> -&gt;
       pp f "[%a] " (* space *)
         (list (type_param ctxt) ~sep:",") l
@@ -3647,7 +3646,7 @@ and attributes ctxt f l =
   <span data-count="987">L</span>ist.iter (attribute ctxt f) l
 
 and item_attributes ctxt f l =
-  <span data-count="3313">L</span>ist.iter (item_attribute ctxt f) l
+  <span data-count="3314">L</span>ist.iter (item_attribute ctxt f) l
 
 and attribute ctxt f (s, e) =
   <span data-count="85">p</span>p f "@[&lt;2&gt;[@@%s@ %a]@]" s.txt (payload ctxt) e
@@ -3668,7 +3667,7 @@ and value_description ctxt f x =
     ) x
 
 and extension ctxt f (s, e) =
-  <span data-count="39">p</span>p f "@[&lt;2&gt;[%%%s@ %a]@]" s.txt (payload ctxt) e
+  <span data-count="40">p</span>p f "@[&lt;2&gt;[%%%s@ %a]@]" s.txt (payload ctxt) e
 
 and item_extension ctxt f (s, e) =
   <span data-count="50">p</span>p f "@[&lt;2&gt;[%%%%%s@ %a]@]" s.txt (payload ctxt) e
@@ -3811,11 +3810,11 @@ and class_structure ctxt f { pcstr_self = p; pcstr_fields =  l } =
     (list (class_field ctxt)) l
 
 and class_expr ctxt f x =
-  <span data-count="93">i</span>f x.pcl_attributes &lt;&gt; [] then <span data-count="3">b</span>egin
+  <span data-count="94">i</span>f x.pcl_attributes &lt;&gt; [] then <span data-count="3">b</span>egin
     pp f "((%a)%a)" (class_expr ctxt) {x with pcl_attributes=[]}
       (attributes ctxt) x.pcl_attributes
   end else
-    <span data-count="90">m</span>atch x.pcl_desc with
+    <span data-count="91">m</span>atch x.pcl_desc with
     | <span data-count="54">P</span>cl_structure (cs) -&gt; class_structure ctxt f cs
     | <span data-count="3">P</span>cl_fun (l, eo, p, e) -&gt;
         pp f "fun@ %a@ -&gt;@ %a"
@@ -3839,7 +3838,7 @@ and class_expr ctxt f x =
         pp f "(%a@ :@ %a)"
           (class_expr ctxt) ce
           (class_type ctxt) ct
-    | <span data-count="0">P</span>cl_extension e -&gt; extension ctxt f e
+    | <span data-count="1">P</span>cl_extension e -&gt; extension ctxt f e
 
 and module_type ctxt f x =
   <span data-count="609">i</span>f x.pmty_attributes &lt;&gt; [] then <span data-count="6">b</span>egin
@@ -3996,14 +3995,14 @@ and module_expr ctxt f x =
         pp f "(val@ %a)" (expression ctxt) e
     | <span data-count="1">P</span>mod_extension e -&gt; extension ctxt f e
 
-and structure ctxt f x = <span data-count="181">l</span>ist ~sep:"@\n" (structure_item ctxt) f x
+and structure ctxt f x = <span data-count="182">l</span>ist ~sep:"@\n" (structure_item ctxt) f x
 
-and payload ctxt f = <span data-count="255">f</span>unction
+and payload ctxt f = <span data-count="256">f</span>unction
   | <span data-count="45">P</span>Str [{pstr_desc = Pstr_eval (e, attrs)}] -&gt;
       pp f "@[&lt;2&gt;%a@]%a"
         (expression ctxt) e
         (item_attributes ctxt) attrs
-  | <span data-count="180">P</span>Str x -&gt; structure ctxt f x
+  | <span data-count="181">P</span>Str x -&gt; structure ctxt f x
   | <span data-count="6">P</span>Typ x -&gt; pp f ":"; <span data-count="6">c</span>ore_type ctxt f x
   | <span data-count="17">P</span>Sig x -&gt; pp f ":"; <span data-count="17">s</span>ignature ctxt f x
   | <span data-count="6">P</span>Pat (x, None) -&gt; pp f "?"; <span data-count="6">p</span>attern ctxt f x
@@ -4062,7 +4061,7 @@ and bindings ctxt f (rf,l) =
         (list ~sep:"@," (binding "and" Nonrecursive)) xs
 
 and structure_item ctxt f x =
-  <span data-count="2325">m</span>atch x.pstr_desc with
+  <span data-count="2326">m</span>atch x.pstr_desc with
   | <span data-count="69">P</span>str_eval (e, attrs) -&gt;
       pp f "@[&lt;hov2&gt;;;%a@]%a"
         (expression ctxt) e
@@ -4112,38 +4111,38 @@ and structure_item ctxt f x =
                <span data-count="126">p</span>p f "@ =@ %a" (module_type ctxt) mt
         ) md
         (item_attributes ctxt) attrs
-  | <span data-count="55">P</span>str_class l -&gt;
+  | <span data-count="56">P</span>str_class l -&gt;
       let extract_class_args cl =
-        <span data-count="58">l</span>et rec loop acc cl =
-          <span data-count="85">m</span>atch cl.pcl_desc with
+        <span data-count="59">l</span>et rec loop acc cl =
+          <span data-count="86">m</span>atch cl.pcl_desc with
           | <span data-count="27">P</span>cl_fun (l, eo, p, cl') when <span data-count="28">c</span>l.pcl_attributes = [] -&gt;
               loop ((l,eo,p) :: acc) cl'
-          | <span data-count="58">_</span> -&gt; List.rev acc, cl
+          | <span data-count="59">_</span> -&gt; List.rev acc, cl
         in
-        <span data-count="58">l</span>et args, cl = <span data-count="58">l</span>oop [] cl in
-        <span data-count="58">l</span>et constr, cl =
-          <span data-count="58">m</span>atch cl.pcl_desc with
+        <span data-count="59">l</span>et args, cl = <span data-count="59">l</span>oop [] cl in
+        <span data-count="59">l</span>et constr, cl =
+          <span data-count="59">m</span>atch cl.pcl_desc with
           | <span data-count="7">P</span>cl_constraint (cl', ct) when <span data-count="7">c</span>l.pcl_attributes = [] -&gt;
               Some ct, cl'
-          | <span data-count="51">_</span> -&gt; None, cl
+          | <span data-count="52">_</span> -&gt; None, cl
         in
-        <span data-count="58">a</span>rgs, constr, cl
+        <span data-count="59">a</span>rgs, constr, cl
       in
-      <span data-count="55">l</span>et class_constraint f ct = <span data-count="7">p</span>p f ": @[%a@] " (class_type ctxt) ct in
-      <span data-count="55">l</span>et class_declaration kwd f
+      <span data-count="56">l</span>et class_constraint f ct = <span data-count="7">p</span>p f ": @[%a@] " (class_type ctxt) ct in
+      <span data-count="56">l</span>et class_declaration kwd f
           ({pci_params=ls; pci_name={txt;_}; _} as x) =
-        <span data-count="58">l</span>et args, constr, cl = <span data-count="58">e</span>xtract_class_args x.pci_expr in
-        <span data-count="58">p</span>p f "@[&lt;2&gt;%s %a%a%s %a%a=@;%a@]%a" kwd
+        <span data-count="59">l</span>et args, constr, cl = <span data-count="59">e</span>xtract_class_args x.pci_expr in
+        <span data-count="59">p</span>p f "@[&lt;2&gt;%s %a%a%s %a%a=@;%a@]%a" kwd
           virtual_flag x.pci_virt
           (class_params_def ctxt) ls txt
           (list (label_exp ctxt)) args
           (option class_constraint) constr
           (class_expr ctxt) cl
           (item_attributes ctxt) x.pci_attributes
-      in <span data-count="55">b</span>egin
+      in <span data-count="56">b</span>egin
         match l with
         | <span data-count="0">[</span>] -&gt; ()
-        | <span data-count="53">[</span>x] -&gt; class_declaration "class" f x
+        | <span data-count="54">[</span>x] -&gt; class_declaration "class" f x
         | <span data-count="2">x</span> :: xs -&gt;
             pp f "@[&lt;v&gt;%a@,%a@]"
               (class_declaration "class") x
@@ -4393,7 +4392,7 @@ let structure = <span data-count="1">s</span>tructure reset_ctxt
 </pre>
       </div>
     </div>
-    <div id="footer">Generated by on 2016-05-16 22:57:16 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <div id="footer">Generated by on 2016-05-16 22:59:02 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
     <script src="coverage.js"></script>
   </body>
 </html>

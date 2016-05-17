@@ -5993,14 +5993,14 @@ let get_label_name lexbuf =
 (* Update the current location with file name and line number. *)
 
 let update_loc lexbuf file line absolute chars =
-  <span data-count="12786">l</span>et pos = <span data-count="12786">l</span>exbuf.lex_curr_p in
-  <span data-count="12786">l</span>et new_file = <span data-count="12786">m</span>atch file with
-                 | <span data-count="12786">N</span>one -&gt; pos.pos_fname
+  <span data-count="12787">l</span>et pos = <span data-count="12787">l</span>exbuf.lex_curr_p in
+  <span data-count="12787">l</span>et new_file = <span data-count="12787">m</span>atch file with
+                 | <span data-count="12787">N</span>one -&gt; pos.pos_fname
                  | <span data-count="0">S</span>ome s -&gt; s
   in
-  <span data-count="12786">l</span>exbuf.lex_curr_p &lt;- { pos with
+  <span data-count="12787">l</span>exbuf.lex_curr_p &lt;- { pos with
     pos_fname = new_file;
-    pos_lnum = if absolute then <span data-count="0">l</span>ine else <span data-count="12786">p</span>os.pos_lnum + line;
+    pos_lnum = if absolute then <span data-count="0">l</span>ine else <span data-count="12787">p</span>os.pos_lnum + line;
     pos_bol = pos.pos_cnum - chars;
   }
 ;;
@@ -7659,9 +7659,9 @@ let __ocaml_lex_tables = <span data-count="1">{</span>
 }
 
 let rec token lexbuf =
-  <span data-count="177511">l</span>exbuf.Lexing.lex_mem &lt;- Array.make 8 (-1) ;   <span data-count="177511">_</span>_ocaml_lex_token_rec lexbuf 0
+  <span data-count="177531">l</span>exbuf.Lexing.lex_mem &lt;- Array.make 8 (-1) ;   <span data-count="177531">_</span>_ocaml_lex_token_rec lexbuf 0
 and __ocaml_lex_token_rec lexbuf __ocaml_lex_state =
-  <span data-count="177819">m</span>atch Lexing.new_engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
+  <span data-count="177839">m</span>atch Lexing.new_engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | <span data-count="0">0</span> -&gt;
 # 308 "src/parsing/lexer.mll"
                  (
@@ -7672,13 +7672,13 @@ and __ocaml_lex_token_rec lexbuf __ocaml_lex_state =
       <span data-count="0">t</span>oken lexbuf )
 # 1867 "src/parsing/lexer.ml"
 
-  | <span data-count="12507">1</span> -&gt;
+  | <span data-count="12508">1</span> -&gt;
 # 315 "src/parsing/lexer.mll"
       ( update_loc lexbuf None 1 false 0;
-        <span data-count="12507">E</span>OL )
+        <span data-count="12508">E</span>OL )
 # 1873 "src/parsing/lexer.ml"
 
-  | <span data-count="64954">2</span> -&gt;
+  | <span data-count="64961">2</span> -&gt;
 # 318 "src/parsing/lexer.mll"
       ( token lexbuf )
 # 1878 "src/parsing/lexer.ml"
@@ -7718,11 +7718,11 @@ and __ocaml_lex_token_rec lexbuf __ocaml_lex_state =
       ( warn_latin1 lexbuf; <span data-count="0">O</span>PTLABEL (get_label_name lexbuf) )
 # 1913 "src/parsing/lexer.ml"
 
-  | <span data-count="41929">1</span>0 -&gt;
+  | <span data-count="41935">1</span>0 -&gt;
 # 334 "src/parsing/lexer.mll"
-      ( let s = <span data-count="41929">L</span>exing.lexeme lexbuf in
-        <span data-count="41929">t</span>ry Hashtbl.find keyword_table s
-        with <span data-count="26361">N</span>ot_found -&gt; LIDENT s )
+      ( let s = <span data-count="41935">L</span>exing.lexeme lexbuf in
+        <span data-count="41935">t</span>ry Hashtbl.find keyword_table s
+        with <span data-count="26365">N</span>ot_found -&gt; LIDENT s )
 # 1920 "src/parsing/lexer.ml"
 
   | <span data-count="0">1</span>1 -&gt;
@@ -8030,7 +8030,7 @@ and
          ( LESSMINUS )
 # 2225 "src/parsing/lexer.ml"
 
-  | <span data-count="5647">5</span>5 -&gt;
+  | <span data-count="5649">5</span>5 -&gt;
 # 451 "src/parsing/lexer.mll"
          ( EQUAL )
 # 2230 "src/parsing/lexer.ml"
@@ -8055,7 +8055,7 @@ and
          ( LBRACKETGREATER )
 # 2250 "src/parsing/lexer.ml"
 
-  | <span data-count="812">6</span>0 -&gt;
+  | <span data-count="814">6</span>0 -&gt;
 # 456 "src/parsing/lexer.mll"
          ( RBRACKET )
 # 2255 "src/parsing/lexer.ml"
@@ -8120,7 +8120,7 @@ and
            ( LBRACKETATATAT )
 # 2315 "src/parsing/lexer.ml"
 
-  | <span data-count="60">7</span>3 -&gt;
+  | <span data-count="62">7</span>3 -&gt;
 # 469 "src/parsing/lexer.mll"
            ( LBRACKETPERCENT )
 # 2320 "src/parsing/lexer.ml"
@@ -8506,8 +8506,8 @@ and __ocaml_lex_skip_sharp_bang_rec lexbuf __ocaml_lex_state =
  
 
   let token_with_comments lexbuf =
-    <span data-count="112557">m</span>atch !preprocessor with
-    | <span data-count="112557">N</span>one -&gt; token lexbuf
+    <span data-count="112570">m</span>atch !preprocessor with
+    | <span data-count="112570">N</span>one -&gt; token lexbuf
     | <span data-count="0">S</span>ome (_init, preprocess) -&gt; preprocess token lexbuf
 
   type newline_state =
@@ -8529,11 +8529,11 @@ and __ocaml_lex_skip_sharp_bang_rec lexbuf __ocaml_lex_state =
   and docstring = Docstrings.docstring
 
   let token lexbuf =
-    <span data-count="99547">l</span>et post_pos = <span data-count="99547">l</span>exeme_end_p lexbuf in
-    <span data-count="99547">l</span>et attach lines docs pre_pos =
-      <span data-count="99547">l</span>et open Docstrings in
+    <span data-count="99559">l</span>et post_pos = <span data-count="99559">l</span>exeme_end_p lexbuf in
+    <span data-count="99559">l</span>et attach lines docs pre_pos =
+      <span data-count="99559">l</span>et open Docstrings in
         match docs, lines with
-        | <span data-count="99538">I</span>nitial, _ -&gt; ()
+        | <span data-count="99550">I</span>nitial, _ -&gt; ()
         | <span data-count="5">A</span>fter a, (<span data-count="1">N</span>oLine | <span data-count="4">N</span>ewLine) -&gt;
             set_post_docstrings post_pos (List.rev a);
             <span data-count="5">s</span>et_pre_docstrings pre_pos a;
@@ -8555,25 +8555,25 @@ and __ocaml_lex_skip_sharp_bang_rec lexbuf __ocaml_lex_state =
               (List.rev_append f (List.rev b));
             <span data-count="0">s</span>et_pre_extra_docstrings pre_pos (List.rev a)
     in
-    <span data-count="99547">l</span>et rec loop lines docs lexbuf =
-      <span data-count="112557">m</span>atch token_with_comments lexbuf with
+    <span data-count="99559">l</span>et rec loop lines docs lexbuf =
+      <span data-count="112570">m</span>atch token_with_comments lexbuf with
       | <span data-count="494">C</span>OMMENT (s, loc) -&gt;
           add_comment (s, loc);
           <span data-count="494">l</span>et lines' =
             <span data-count="494">m</span>atch lines with
             | <span data-count="148">N</span>oLine -&gt; NoLine
-            | <span data-count="95">N</span>ewLine -&gt; NoLine
-            | <span data-count="251">B</span>lankLine -&gt; BlankLine
+            | <span data-count="96">N</span>ewLine -&gt; NoLine
+            | <span data-count="250">B</span>lankLine -&gt; BlankLine
           in
           <span data-count="494">l</span>oop lines' docs lexbuf
-      | <span data-count="12507">E</span>OL -&gt;
+      | <span data-count="12508">E</span>OL -&gt;
           let lines' =
-            <span data-count="12507">m</span>atch lines with
-            | <span data-count="10878">N</span>oLine -&gt; NewLine
-            | <span data-count="1205">N</span>ewLine -&gt; BlankLine
-            | <span data-count="424">B</span>lankLine -&gt; BlankLine
+            <span data-count="12508">m</span>atch lines with
+            | <span data-count="10881">N</span>oLine -&gt; NewLine
+            | <span data-count="1206">N</span>ewLine -&gt; BlankLine
+            | <span data-count="421">B</span>lankLine -&gt; BlankLine
           in
-          <span data-count="12507">l</span>oop lines' docs lexbuf
+          <span data-count="12508">l</span>oop lines' docs lexbuf
       | <span data-count="9">D</span>OCSTRING doc -&gt;
           add_docstring_comment doc;
           <span data-count="9">l</span>et docs' =
@@ -8586,11 +8586,11 @@ and __ocaml_lex_skip_sharp_bang_rec lexbuf __ocaml_lex_state =
             | <span data-count="0">B</span>efore(a, f, b), BlankLine -&gt; Before(a, b @ f, [doc])
           in
           <span data-count="9">l</span>oop NoLine docs' lexbuf
-      | <span data-count="99547">t</span>ok -&gt;
+      | <span data-count="99559">t</span>ok -&gt;
           attach lines docs (lexeme_start_p lexbuf);
-          <span data-count="99547">t</span>ok
+          <span data-count="99559">t</span>ok
     in
-      <span data-count="99547">l</span>oop NoLine Initial lexbuf
+      <span data-count="99559">l</span>oop NoLine Initial lexbuf
 
   let init () =
     <span data-count="2">i</span>s_in_string := false;
@@ -8609,7 +8609,7 @@ and __ocaml_lex_skip_sharp_bang_rec lexbuf __ocaml_lex_state =
 </pre>
       </div>
     </div>
-    <div id="footer">Generated by on 2016-05-16 22:57:16 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <div id="footer">Generated by on 2016-05-16 22:59:02 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
     <script src="coverage.js"></script>
   </body>
 </html>

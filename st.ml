@@ -7231,7 +7231,7 @@ let () = proj1 (inj2 42)
 
 let _ = ~-1
 
-
+class id = [%exp]
 (* checkpoint *)
 
 (* Subtyping is "syntactic" *)

@@ -11,12 +11,11 @@
           <span class="dirname">src/parsing/</span>ast_mapper.ml
         </a>
       </h1>
-      <h2>61.27%</h2>
+      <h2>61.52%</h2>
     </div>
     <div id="navbar">
       <span class="unvisited" style="top:20.76%"></span>
       <span class="unvisited" style="top:45.33%"></span>
-      <span class="unvisited" style="top:48.59%"></span>
       <span class="unvisited" style="top:67.50%"></span>
       <span class="unvisited" style="top:69.13%"></span>
       <span class="unvisited" style="top:69.46%"></span>
@@ -609,7 +608,7 @@
 <a id="L444"></a><span > </span>
 <a id="L445"></a><span class="visited"> </span>
 <a id="L446"></a><span > </span>
-<a id="L447"></a><span class="unvisited"> </span>
+<a id="L447"></a><span class="visited"> </span>
 <a id="L448"></a><span > </span>
 <a id="L449"></a><span class="visited"> </span>
 <a id="L450"></a><span class="visited"> </span>
@@ -2089,7 +2088,7 @@ let map_tuple f1 f2 (x, y) = <span data-count="378">(</span>f1 x, f2 y)
 let map_tuple3 f1 f2 f3 (x, y, z) = <span data-count="26">(</span>f1 x, f2 y, f3 z)
 let map_opt f = <span data-count="11016">f</span>unction <span data-count="6698">N</span>one -&gt; None | <span data-count="4318">S</span>ome x -&gt; Some (f x)
 
-let map_loc sub {loc; txt} = <span data-count="31148">{</span>loc = sub.location sub loc; txt}
+let map_loc sub {loc; txt} = <span data-count="31152">{</span>loc = sub.location sub loc; txt}
 
 module T = struct
   (* Type expressions for the core language *)
@@ -2297,9 +2296,9 @@ module M = struct
     | <span data-count="2">P</span>mod_extension x -&gt; extension ~loc ~attrs (sub.extension sub x)
 
   let map_structure_item sub {pstr_loc = loc; pstr_desc = desc} =
-    <span data-count="4740">l</span>et open Str in
-    let loc = <span data-count="4740">s</span>ub.location sub loc in
-    <span data-count="4740">m</span>atch desc with
+    <span data-count="4742">l</span>et open Str in
+    let loc = <span data-count="4742">s</span>ub.location sub loc in
+    <span data-count="4742">m</span>atch desc with
     | <span data-count="228">P</span>str_eval (x, attrs) -&gt;
         eval ~loc ~attrs:(sub.attributes sub attrs) (sub.expr sub x)
     | <span data-count="1594">P</span>str_value (r, vbs) -&gt; value ~loc r (List.map (sub.value_binding sub) vbs)
@@ -2311,7 +2310,7 @@ module M = struct
     | <span data-count="106">P</span>str_recmodule l -&gt; rec_module ~loc (List.map (sub.module_binding sub) l)
     | <span data-count="260">P</span>str_modtype x -&gt; modtype ~loc (sub.module_type_declaration sub x)
     | <span data-count="74">P</span>str_open x -&gt; open_ ~loc (sub.open_description sub x)
-    | <span data-count="110">P</span>str_class l -&gt; class_ ~loc (List.map (sub.class_declaration sub) l)
+    | <span data-count="112">P</span>str_class l -&gt; class_ ~loc (List.map (sub.class_declaration sub) l)
     | <span data-count="42">P</span>str_class_type l -&gt;
         class_type ~loc (List.map (sub.class_type_declaration sub) l)
     | <span data-count="80">P</span>str_include x -&gt; include_ ~loc (sub.include_declaration sub x)
@@ -2434,10 +2433,10 @@ module CE = struct
   (* Value expressions for the class language *)
 
   let map sub {pcl_loc = loc; pcl_desc = desc; pcl_attributes = attrs} =
-    <span data-count="248">l</span>et open Cl in
-    let loc = <span data-count="248">s</span>ub.location sub loc in
-    <span data-count="248">l</span>et attrs = <span data-count="248">s</span>ub.attributes sub attrs in
-    <span data-count="248">m</span>atch desc with
+    <span data-count="250">l</span>et open Cl in
+    let loc = <span data-count="250">s</span>ub.location sub loc in
+    <span data-count="250">l</span>et attrs = <span data-count="250">s</span>ub.attributes sub attrs in
+    <span data-count="250">m</span>atch desc with
     | <span data-count="34">P</span>cl_constr (lid, tys) -&gt;
         constr ~loc ~attrs (map_loc sub lid) (List.map (sub.typ sub) tys)
     | <span data-count="108">P</span>cl_structure s -&gt;
@@ -2455,7 +2454,7 @@ module CE = struct
           (sub.class_expr sub ce)
     | <span data-count="16">P</span>cl_constraint (ce, ct) -&gt;
         constraint_ ~loc ~attrs (sub.class_expr sub ce) (sub.class_type sub ct)
-    | <span data-count="0">P</span>cl_extension x -&gt; extension ~loc ~attrs (sub.extension sub x)
+    | <span data-count="2">P</span>cl_extension x -&gt; extension ~loc ~attrs (sub.extension sub x)
 
   let map_kind sub = <span data-count="226">f</span>unction
     | <span data-count="196">C</span>fk_concrete (o, e) -&gt; Cfk_concrete (o, sub.expr sub e)
@@ -2484,7 +2483,7 @@ module CE = struct
 
   let class_infos sub f {pci_virt; pci_params = pl; pci_name; pci_expr;
                          pci_loc; pci_attributes} =
-    <span data-count="180">C</span>i.mk
+    <span data-count="182">C</span>i.mk
      ~virt:pci_virt
      ~params:(List.map (map_fst (sub.typ sub)) pl)
       (map_loc sub pci_name)
@@ -2499,7 +2498,7 @@ end
 
 let default_mapper =
   <span data-count="1">{</span>
-    structure = (fun this l -&gt; <span data-count="1312">L</span>ist.map (this.structure_item this) l);
+    structure = (fun this l -&gt; <span data-count="1314">L</span>ist.map (this.structure_item this) l);
     structure_item = M.map_structure_item;
     module_expr = M.map;
     signature = (fun this l -&gt; <span data-count="772">L</span>ist.map (this.signature_item this) l);
@@ -2507,7 +2506,7 @@ let default_mapper =
     module_type = MT.map;
     with_constraint = MT.map_with_constraint;
     class_declaration =
-      (fun this -&gt; <span data-count="110">C</span>E.class_infos this (this.class_expr this));
+      (fun this -&gt; <span data-count="112">C</span>E.class_infos this (this.class_expr this));
     class_expr = CE.map;
     class_field = CE.map_field;
     class_structure = CE.map_structure;
@@ -2631,12 +2630,12 @@ let default_mapper =
 
     location = (fun _this l -&gt; <span data-count="0">l</span>);
 
-    extension = (fun this (s, e) -&gt; <span data-count="178">(</span>map_loc this s, this.payload this e));
+    extension = (fun this (s, e) -&gt; <span data-count="180">(</span>map_loc this s, this.payload this e));
     attribute = (fun this (s, e) -&gt; <span data-count="332">(</span>map_loc this s, this.payload this e));
-    attributes = (fun this l -&gt; <span data-count="53948">L</span>ist.map (this.attribute this) l);
+    attributes = (fun this l -&gt; <span data-count="53952">L</span>ist.map (this.attribute this) l);
     payload =
-      (fun this -&gt; <span data-count="510">f</span>unction
-         | <span data-count="450">P</span>Str x -&gt; PStr (this.structure this x)
+      (fun this -&gt; <span data-count="512">f</span>unction
+         | <span data-count="452">P</span>Str x -&gt; PStr (this.structure this x)
          | <span data-count="34">P</span>Sig x -&gt; PSig (this.signature this x)
          | <span data-count="12">P</span>Typ x -&gt; PTyp (this.typ this x)
          | <span data-count="14">P</span>Pat (x, g) -&gt; PPat (this.pat this x, map_opt (this.expr this) g)
@@ -2932,7 +2931,7 @@ let register name f = <span data-count="0">!</span>register_function name f
 </pre>
       </div>
     </div>
-    <div id="footer">Generated by on 2016-05-16 22:57:16 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <div id="footer">Generated by on 2016-05-16 22:59:02 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
     <script src="coverage.js"></script>
   </body>
 </html>

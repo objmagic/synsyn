@@ -11,7 +11,7 @@
           <span class="dirname">src/parsing/</span>parser.ml
         </a>
       </h1>
-      <h2>75.55%</h2>
+      <h2>75.63%</h2>
     </div>
     <div id="navbar">
       <span class="unvisited" style="top:1.45%"></span>
@@ -160,8 +160,6 @@
       <span class="unvisited" style="top:60.75%"></span>
       <span class="unvisited" style="top:60.76%"></span>
       <span class="unvisited" style="top:60.77%"></span>
-      <span class="unvisited" style="top:61.11%"></span>
-      <span class="unvisited" style="top:61.11%"></span>
       <span class="unvisited" style="top:61.34%"></span>
       <span class="unvisited" style="top:61.35%"></span>
       <span class="unvisited" style="top:61.36%"></span>
@@ -8452,8 +8450,8 @@
 <a id="L7843"></a><span > </span>
 <a id="L7844"></a><span > </span>
 <a id="L7845"></a><span > </span>
-<a id="L7846"></a><span class="unvisited"> </span>
-<a id="L7847"></a><span class="unvisited"> </span>
+<a id="L7846"></a><span class="visited"> </span>
+<a id="L7847"></a><span class="visited"> </span>
 <a id="L7848"></a><span > </span>
 <a id="L7849"></a><span > </span>
 <a id="L7850"></a><span > </span>
@@ -26429,15 +26427,15 @@ let mkexp d = <span data-count="16632">E</span>xp.mk ~loc:(symbol_rloc()) d
 let mkmty ?attrs d = <span data-count="1440">M</span>ty.mk ~loc:(symbol_rloc()) ?attrs d
 let mksig d = <span data-count="1117">S</span>ig.mk ~loc:(symbol_rloc()) d
 let mkmod ?attrs d = <span data-count="2198">M</span>od.mk ~loc:(symbol_rloc()) ?attrs d
-let mkstr d = <span data-count="4497">S</span>tr.mk ~loc:(symbol_rloc()) d
-let mkclass ?attrs d = <span data-count="248">C</span>l.mk ~loc:(symbol_rloc()) ?attrs d
+let mkstr d = <span data-count="4499">S</span>tr.mk ~loc:(symbol_rloc()) d
+let mkclass ?attrs d = <span data-count="250">C</span>l.mk ~loc:(symbol_rloc()) ?attrs d
 let mkcty ?attrs d = <span data-count="94">C</span>ty.mk ~loc:(symbol_rloc()) ?attrs d
 let mkctf ?attrs ?docs d =
   <span data-count="100">C</span>tf.mk ~loc:(symbol_rloc()) ?attrs ?docs d
 let mkcf ?attrs ?docs d =
   <span data-count="278">C</span>f.mk ~loc:(symbol_rloc()) ?attrs ?docs d
 
-let mkrhs rhs pos = <span data-count="29535">m</span>kloc rhs (rhs_loc pos)
+let mkrhs rhs pos = <span data-count="29537">m</span>kloc rhs (rhs_loc pos)
 
 let reloc_pat x = <span data-count="855">{</span> x with ppat_loc = symbol_rloc () };;
 let reloc_exp x = <span data-count="2338">{</span> x with pexp_loc = symbol_rloc () };;
@@ -26714,12 +26712,12 @@ let wrap_mty_attrs body attrs =
   <span data-count="30">{</span>body with pmty_attributes = attrs @ body.pmty_attributes}
 
 let wrap_str_ext body ext =
-  <span data-count="2836">m</span>atch ext with
-  | <span data-count="2825">N</span>one -&gt; body
+  <span data-count="2838">m</span>atch ext with
+  | <span data-count="2827">N</span>one -&gt; body
   | <span data-count="11">S</span>ome id -&gt; ghstr(Pstr_extension ((id, PStr [body]), []))
 
 let mkstr_ext d ext =
-  <span data-count="2836">w</span>rap_str_ext (mkstr d) ext
+  <span data-count="2838">w</span>rap_str_ext (mkstr d) ext
 
 let wrap_sig_ext body ext =
   <span data-count="1102">m</span>atch ext with
@@ -26729,7 +26727,7 @@ let wrap_sig_ext body ext =
 let mksig_ext d ext =
   <span data-count="1102">w</span>rap_sig_ext (mksig d) ext
 
-let text_str pos = <span data-count="5701">S</span>tr.text (rhs_text pos)
+let text_str pos = <span data-count="5703">S</span>tr.text (rhs_text pos)
 let text_sig pos = <span data-count="1117">S</span>ig.text (rhs_text pos)
 let text_cstr pos = <span data-count="278">C</span>f.text (rhs_text pos)
 let text_csig pos = <span data-count="100">C</span>tf.text (rhs_text pos)
@@ -33424,14 +33422,14 @@ let yyact = <span data-count="1">[</span>|
 # 7130 "src/parsing/parser.ml"
                : 'structure))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="2064">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'structure_tail) in
-    <span data-count="2064">O</span>bj.repr(
+    <span data-count="2066">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'structure_tail) in
+    <span data-count="2066">O</span>bj.repr(
 # 812 "src/parsing/parser.mly"
                    ( _1 )
 # 7137 "src/parsing/parser.ml"
                : 'structure))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="1272">O</span>bj.repr(
+    <span data-count="1274">O</span>bj.repr(
 # 815 "src/parsing/parser.mly"
                          ( [] )
 # 7143 "src/parsing/parser.ml"
@@ -33444,9 +33442,9 @@ let yyact = <span data-count="1">[</span>|
 # 7150 "src/parsing/parser.ml"
                : 'structure_tail))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="4497">l</span>et _1 = (Parsing.peek_val __caml_parser_env 1 : 'structure_item) in
-    <span data-count="4497">l</span>et _2 = (Parsing.peek_val __caml_parser_env 0 : 'structure_tail) in
-    <span data-count="4497">O</span>bj.repr(
+    <span data-count="4499">l</span>et _1 = (Parsing.peek_val __caml_parser_env 1 : 'structure_item) in
+    <span data-count="4499">l</span>et _2 = (Parsing.peek_val __caml_parser_env 0 : 'structure_tail) in
+    <span data-count="4499">O</span>bj.repr(
 # 817 "src/parsing/parser.mly"
                                   ( (text_str 1) @ _1 :: _2 )
 # 7158 "src/parsing/parser.ml"
@@ -33522,10 +33520,10 @@ let yyact = <span data-count="1">[</span>|
 # 7228 "src/parsing/parser.ml"
                : 'structure_item))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="110">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'class_declarations) in
-    <span data-count="110">O</span>bj.repr(
+    <span data-count="112">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'class_declarations) in
+    <span data-count="112">O</span>bj.repr(
 # 841 "src/parsing/parser.mly"
-      ( let (l, ext) = <span data-count="110">_</span>1 in <span data-count="110">m</span>kstr_ext (Pstr_class (List.rev l)) ext )
+      ( let (l, ext) = <span data-count="112">_</span>1 in <span data-count="112">m</span>kstr_ext (Pstr_class (List.rev l)) ext )
 # 7235 "src/parsing/parser.ml"
                : 'structure_item))
 ; (fun __caml_parser_env -&gt;
@@ -34003,10 +34001,10 @@ let yyact = <span data-count="1">[</span>|
 # 7709 "src/parsing/parser.ml"
                : 'module_type_declaration))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="110">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'class_declaration) in
-    <span data-count="110">O</span>bj.repr(
+    <span data-count="112">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'class_declaration) in
+    <span data-count="112">O</span>bj.repr(
 # 1035 "src/parsing/parser.mly"
-      ( let (body, ext) = <span data-count="110">_</span>1 in <span data-count="110">(</span>[body], ext) )
+      ( let (body, ext) = <span data-count="112">_</span>1 in <span data-count="112">(</span>[body], ext) )
 # 7716 "src/parsing/parser.ml"
                : 'class_declarations))
 ; (fun __caml_parser_env -&gt;
@@ -34018,16 +34016,16 @@ let yyact = <span data-count="1">[</span>|
 # 7724 "src/parsing/parser.ml"
                : 'class_declarations))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="110">l</span>et _2 = (Parsing.peek_val __caml_parser_env 5 : 'ext_attributes) in
-    <span data-count="110">l</span>et _3 = (Parsing.peek_val __caml_parser_env 4 : 'virtual_flag) in
-    <span data-count="110">l</span>et _4 = (Parsing.peek_val __caml_parser_env 3 : 'class_type_parameters) in
-    <span data-count="110">l</span>et _5 = (Parsing.peek_val __caml_parser_env 2 : string) in
-    <span data-count="110">l</span>et _6 = (Parsing.peek_val __caml_parser_env 1 : 'class_fun_binding) in
-    <span data-count="110">l</span>et _7 = (Parsing.peek_val __caml_parser_env 0 : 'post_item_attributes) in
-    <span data-count="110">O</span>bj.repr(
+    <span data-count="112">l</span>et _2 = (Parsing.peek_val __caml_parser_env 5 : 'ext_attributes) in
+    <span data-count="112">l</span>et _3 = (Parsing.peek_val __caml_parser_env 4 : 'virtual_flag) in
+    <span data-count="112">l</span>et _4 = (Parsing.peek_val __caml_parser_env 3 : 'class_type_parameters) in
+    <span data-count="112">l</span>et _5 = (Parsing.peek_val __caml_parser_env 2 : string) in
+    <span data-count="112">l</span>et _6 = (Parsing.peek_val __caml_parser_env 1 : 'class_fun_binding) in
+    <span data-count="112">l</span>et _7 = (Parsing.peek_val __caml_parser_env 0 : 'post_item_attributes) in
+    <span data-count="112">O</span>bj.repr(
 # 1042 "src/parsing/parser.mly"
-      ( let (ext, attrs) = <span data-count="110">_</span>2 in
-        <span data-count="110">C</span>i.mk (mkrhs _5 5) _6 ~virt:_3 ~params:_4 ~attrs:(attrs@_7)
+      ( let (ext, attrs) = <span data-count="112">_</span>2 in
+        <span data-count="112">C</span>i.mk (mkrhs _5 5) _6 ~virt:_3 ~params:_4 ~attrs:(attrs@_7)
             ~loc:(symbol_rloc ()) ~docs:(symbol_docs ())
       , ext )
 # 7739 "src/parsing/parser.ml"
@@ -34047,8 +34045,8 @@ let yyact = <span data-count="1">[</span>|
 # 7753 "src/parsing/parser.ml"
                : 'and_class_declaration))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="102">l</span>et _2 = (Parsing.peek_val __caml_parser_env 0 : 'class_expr) in
-    <span data-count="102">O</span>bj.repr(
+    <span data-count="104">l</span>et _2 = (Parsing.peek_val __caml_parser_env 0 : 'class_expr) in
+    <span data-count="104">O</span>bj.repr(
 # 1056 "src/parsing/parser.mly"
       ( _2 )
 # 7760 "src/parsing/parser.ml"
@@ -34070,7 +34068,7 @@ let yyact = <span data-count="1">[</span>|
 # 7776 "src/parsing/parser.ml"
                : 'class_fun_binding))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="118">O</span>bj.repr(
+    <span data-count="120">O</span>bj.repr(
 # 1063 "src/parsing/parser.mly"
                                                 ( [] )
 # 7782 "src/parsing/parser.ml"
@@ -34138,8 +34136,8 @@ let yyact = <span data-count="1">[</span>|
 # 7844 "src/parsing/parser.ml"
                : 'class_expr))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="0">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'extension) in
-    <span data-count="0">O</span>bj.repr(
+    <span data-count="2">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'extension) in
+    <span data-count="2">O</span>bj.repr(
 # 1084 "src/parsing/parser.mly"
       ( mkclass(Pcl_extension _1) )
 # 7851 "src/parsing/parser.ml"
@@ -38536,7 +38534,7 @@ let yyact = <span data-count="1">[</span>|
 # 12242 "src/parsing/parser.ml"
                : 'mutable_flag))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="160">O</span>bj.repr(
+    <span data-count="162">O</span>bj.repr(
 # 2504 "src/parsing/parser.mly"
                                                 ( Concrete )
 # 12248 "src/parsing/parser.ml"
@@ -38638,8 +38636,8 @@ let yyact = <span data-count="1">[</span>|
 # 12344 "src/parsing/parser.ml"
                : 'additive))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="514">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : string) in
-    <span data-count="514">O</span>bj.repr(
+    <span data-count="516">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : string) in
+    <span data-count="516">O</span>bj.repr(
 # 2538 "src/parsing/parser.mly"
            ( _1 )
 # 12351 "src/parsing/parser.ml"
@@ -38946,8 +38944,8 @@ let yyact = <span data-count="1">[</span>|
 # 12652 "src/parsing/parser.ml"
                : 'single_attr_id))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="503">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'single_attr_id) in
-    <span data-count="503">O</span>bj.repr(
+    <span data-count="505">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'single_attr_id) in
+    <span data-count="505">O</span>bj.repr(
 # 2593 "src/parsing/parser.mly"
                    ( mkloc _1 (symbol_rloc()) )
 # 12659 "src/parsing/parser.ml"
@@ -38985,7 +38983,7 @@ let yyact = <span data-count="1">[</span>|
 # 12691 "src/parsing/parser.ml"
                : 'floating_attribute))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="6646">O</span>bj.repr(
+    <span data-count="6648">O</span>bj.repr(
 # 2606 "src/parsing/parser.mly"
                  ( [] )
 # 12697 "src/parsing/parser.ml"
@@ -39013,7 +39011,7 @@ let yyact = <span data-count="1">[</span>|
 # 12719 "src/parsing/parser.ml"
                : 'attributes))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="7595">O</span>bj.repr(
+    <span data-count="7597">O</span>bj.repr(
 # 2614 "src/parsing/parser.mly"
                  ( None, [] )
 # 12725 "src/parsing/parser.ml"
@@ -39035,9 +39033,9 @@ let yyact = <span data-count="1">[</span>|
 # 12741 "src/parsing/parser.ml"
                : 'ext_attributes))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="60">l</span>et _2 = (Parsing.peek_val __caml_parser_env 2 : 'attr_id) in
-    <span data-count="60">l</span>et _3 = (Parsing.peek_val __caml_parser_env 1 : 'payload) in
-    <span data-count="60">O</span>bj.repr(
+    <span data-count="62">l</span>et _2 = (Parsing.peek_val __caml_parser_env 2 : 'attr_id) in
+    <span data-count="62">l</span>et _3 = (Parsing.peek_val __caml_parser_env 1 : 'payload) in
+    <span data-count="62">O</span>bj.repr(
 # 2619 "src/parsing/parser.mly"
                                            ( (_2, _3) )
 # 12749 "src/parsing/parser.ml"
@@ -39051,8 +39049,8 @@ let yyact = <span data-count="1">[</span>|
 # 12757 "src/parsing/parser.ml"
                : 'item_extension))
 ; (fun __caml_parser_env -&gt;
-    <span data-count="413">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'structure) in
-    <span data-count="413">O</span>bj.repr(
+    <span data-count="415">l</span>et _1 = (Parsing.peek_val __caml_parser_env 0 : 'structure) in
+    <span data-count="415">O</span>bj.repr(
 # 2625 "src/parsing/parser.mly"
               ( PStr _1 )
 # 12764 "src/parsing/parser.ml"
@@ -39136,7 +39134,7 @@ let parse_pattern (lexfun : Lexing.lexbuf -&gt; token) (lexbuf : Lexing.lexbuf) 
 </pre>
       </div>
     </div>
-    <div id="footer">Generated by on 2016-05-16 22:57:16 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
+    <div id="footer">Generated by on 2016-05-16 22:59:02 by <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a> 1.1.0</div>
     <script src="coverage.js"></script>
   </body>
 </html>
