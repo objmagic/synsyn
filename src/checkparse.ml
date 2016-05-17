@@ -58,23 +58,21 @@ let test parse_fun pprint print map filename =
       | exception exn ->
           Printf.printf "%s: FAIL, CANNOT REPARSE\n" filename;
           report_err exn;
-(*
           print_endline str;
-*)
           print_endline "====================================================="
       | ast2 ->
           let ast = map remove_locs remove_locs ast in
           let ast2 = map remove_locs remove_locs ast2 in
           if ast <> ast2 then begin
-            Printf.printf "%s\n" filename; (*
+            Printf.printf "%s\n" filename;
             Printf.printf "%s:  FAIL, REPARSED AST IS DIFFERENT\n%!" filename;
             let f1 = to_tmp_file print ast in
             let f2 = to_tmp_file print ast2 in
-            let cmd = Printf.sprintf "diff -u %s %s" 
+            let cmd = Printf.sprintf "diff -u %s %s"
                 (Filename.quote f1) (Filename.quote f2) in
             let _ret = Sys.command cmd in
             Sys.remove f1;
-            Sys.remove f2; *)
+            Sys.remove f2;
             print_endline "====================================================="
           end
 
